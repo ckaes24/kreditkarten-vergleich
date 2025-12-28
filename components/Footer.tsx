@@ -1,3 +1,5 @@
+import CookieSettings from './CookieSettings'
+
 export default function Footer() {
   return (
     <footer className="relative mt-16 border-t border-gray-200 bg-gray-50 text-sm text-gray-600">
@@ -5,17 +7,18 @@ export default function Footer() {
 
         {/* Affiliate-Hinweis (links) */}
         <p className="text-xs text-gray-500 sm:text-left text-center max-w-prose">
-          * Mit Sternchen gekennzeichnete Links sind Affiliate-Links. Wenn du über einen solchen Link einen Vertrag abschließt, erhalten wir ggf. eine Provision. Für dich entstehen keine zusätzlichen Kosten.
+          * Mit Sternchen gekennzeichnete Links sind Affiliate-Links. Wenn du über einen solchen Link einen Vertrag abschließst, erhalten wir ggf. eine Provision. Für dich entstehen keine zusätzlichen Kosten.
         </p>
 
         {/* Rechtliche Links (rechts) */}
-        <nav className="flex gap-4 justify-center sm:justify-end">
+        <nav className="flex flex-wrap gap-4 justify-center sm:justify-end items-center">
           <a href="/impressum" className="hover:text-gray-900 hover:underline">
             Impressum
           </a>
           <a href="/datenschutz" className="hover:text-gray-900 hover:underline">
             Datenschutz
           </a>
+          <CookieSettings />
         </nav>
 
       </div>

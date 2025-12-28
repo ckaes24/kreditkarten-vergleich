@@ -29,42 +29,42 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100 text-gray-800">
-      <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
+        <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
 
-        {/* HERO */}
-        <section className="bg-white rounded-xl p-6 shadow-sm">
-          <div className="max-w-6xl mx-auto px-4 py-6 grid gap-6 md:grid-cols-2 md:items-start">
-            <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-                Kreditkarten für Reisen & Alltag im Vergleich
-              </h1>
-              <p className="text-gray-600 max-w-prose">
-                Wir vergleichen unabhängig und klar — damit du die Karte findest, die zu deinen Reisen und deinem Alltag passt.
-              </p>
+          {/* HERO */}
+          <section className="bg-white rounded-xl p-6 shadow-sm">
+            <div className="max-w-6xl mx-auto px-4 py-6 grid gap-6 md:grid-cols-2 md:items-start">
+              <div className="space-y-4">
+                <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
+                  Kreditkarten für Reisen & Alltag im Vergleich
+                </h1>
+                <p className="text-gray-600 max-w-prose">
+                  Wir vergleichen unabhängig und klar — damit du die Karte findest, die zu deinen Reisen und deinem Alltag passt.
+                </p>
 
-              <div className="flex gap-3">
-                <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm shadow">Jetzt vergleichen</a>
-                <button onClick={() => setRecommended(!recommended)} className="inline-block bg-white border border-gray-200 hover:border-gray-300 text-gray-700 py-2 px-4 rounded-md text-sm">Top‑Empfehlungen</button>
+                <div className="flex gap-3">
+                  <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm shadow">Jetzt vergleichen</a>
+                  <button onClick={() => setRecommended(!recommended)} className="inline-block bg-white border border-gray-200 hover:border-gray-300 text-gray-700 py-2 px-4 rounded-md text-sm">Top‑Empfehlungen</button>
+                </div>
+
+                <p className="text-sm text-gray-600 mt-3 max-w-prose">Unabhängiger Vergleich — klar & transparent.</p>
               </div>
 
-              <p className="text-sm text-gray-600 mt-3 max-w-prose">Unabhängiger Vergleich — klar & transparent.</p>
-            </div>
-
-            <div>
-              <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-lg p-6 shadow-sm">
-                <h3 className="text-sm font-semibold text-gray-900">So funktioniert's</h3>
-                <ol className="mt-3 text-sm text-gray-700 space-y-2 list-decimal list-inside">
-                  <li>Filter auswählen (z. B. keine Jahresgebühr)</li>
-                  <li>Karten vergleichen und Leistungen prüfen</li>
-                  <li>Über den markierten Link zur Anbieterseite</li>
-                </ol>
-                <div className="mt-4">
-                  <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm">Zum Vergleich</a>
+              <div>
+                <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-lg p-6 shadow-sm">
+                  <h3 className="text-sm font-semibold text-gray-900">So funktioniert's</h3>
+                  <ol className="mt-3 text-sm text-gray-700 space-y-2 list-decimal list-inside">
+                    <li>Filter auswählen (z. B. keine Jahresgebühr)</li>
+                    <li>Karten vergleichen und Leistungen prüfen</li>
+                    <li>Über den markierten Link zur Anbieterseite</li>
+                  </ol>
+                  <div className="mt-4">
+                    <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm">Zum Vergleich</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* FILTER */}
         <section className="flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center">
