@@ -96,7 +96,7 @@ export const cards: CreditCard[] = [
     cardType: 'Credit',
     cashWithdrawal: 'Möglich',
     network: 'Mastercard',
-    applyUrl: 'https://www.financeads.net/tc.php?t=70334C213342396T',
+    applyUrl: 'https://www.financeads.net/tc.php?t=70334C213344020T',
     logo: 'http://www.fndsda.net/b/tfbank/TFBank_MastercardGold_NeuesKartendesign_01.png',
   },
   {
