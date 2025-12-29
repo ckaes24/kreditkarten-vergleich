@@ -49,13 +49,13 @@ export default function KreuzfahrtenPage() {
                 Kreditkarten für Kreuzfahrten im Vergleich
               </h1>
               <p className="text-gray-600 max-w-prose leading-relaxed">
-                Auf Kreuzfahrten spielen Kreditkarten eine zentrale Rolle: Sie dienen als Zahlungsmittel an Bord, 
-                für Landausflüge und beim Umgang mit Fremdwährungen. Die Auswahl der passenden Karte kann dabei helfen, 
-                unnötige Gebühren zu vermeiden und von sinnvollen Zusatzleistungen zu profitieren.
+                Auf Kreuzfahrten werden Kreditkarten häufig für das Bordkonto, für Zahlungen an Bord und 
+                bei Landausflügen benötigt. Dabei können verschiedene Faktoren relevant werden: Akzeptanz durch die Reederei, 
+                Gebühren für Fremdwährungen, Verfügbarkeit eines Kreditrahmens oder optionale Versicherungsleistungen.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser Vergleich zeigt, welche Kriterien bei der Auswahl relevant sind und welche Karten sich 
-                für den Einsatz auf Kreuzfahrten eignen können.
+                Die Anforderungen können je nach Reederei, Reiseziel und persönlicher Nutzung variieren. 
+                Dieser Vergleich stellt verschiedene Karten mit unterschiedlichen Merkmalen gegenüber.
               </p>
 
               <div className="flex gap-3">
@@ -144,7 +144,7 @@ export default function KreuzfahrtenPage() {
               <div className="space-y-3">
                 {best?.id === c.id && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 bg-yellow-50 border border-yellow-400 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                    ⭐ Empfohlen für Kreuzfahrten
+                    Beste Wahl*
                   </div>
                 )}
 
@@ -241,10 +241,20 @@ export default function KreuzfahrtenPage() {
           </table>
         </section>
 
+        {/* DISCLAIMER */}
+        <section className="bg-gray-50 rounded-xl p-6 border border-gray-300">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong>* „Beste Wahl"</strong> bezeichnet eine Auswahl, die auf Basis der hier dargestellten 
+            Vergleichskriterien (z. B. Kartentyp, Gebühren, Netzwerk-Akzeptanz) als besonders passend 
+            für dieses Nutzungsszenario erscheint. Dies stellt keine Finanzberatung dar. 
+            Maßgeblich sind die Angaben des jeweiligen Kartenanbieters und der Reederei.
+          </p>
+        </section>
+
         {/* HINWEISE */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">
-            Sachliche Hinweise & Einschränkungen
+            Wichtige Hinweise
           </h2>
           
           <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
@@ -275,6 +285,16 @@ export default function KreuzfahrtenPage() {
             <p>
               <strong className="text-gray-900">Fremdwährungsabrechnung:</strong> Viele Reedereien rechnen in US-Dollar ab, 
               auch wenn das Schiff in Europa startet. Karten ohne Fremdwährungsgebühr können hier Vorteile bieten.
+            </p>
+            
+            <p className="mt-4">
+              <strong className="text-gray-900">Keine Finanzberatung:</strong> Die Informationen auf dieser Seite dienen 
+              ausschließlich zu Vergleichszwecken und stellen keine Finanz- oder Rechtsberatung dar.
+            </p>
+            
+            <p>
+              <strong className="text-gray-900">Affiliate-Hinweis:</strong> Links mit * sind Affiliate-Links. 
+              Bei Abschluss erhalten wir ggf. eine Provision, ohne dass Ihnen zusätzliche Kosten entstehen.
             </p>
           </div>
         </section>
@@ -343,15 +363,13 @@ export default function KreuzfahrtenPage() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Hinweis zu Provisionen und Aktualität
+                Können zusätzliche Kosten anfallen?
               </summary>
               <p className="mt-2 text-sm text-gray-700">
-                Wenn Sie über einen mit * gekennzeichneten Link eine Karte beantragen, erhalten wir ggf. 
-                eine Provision vom Anbieter. Für Sie entstehen dadurch keine zusätzlichen Kosten. 
-                Konditionen und Leistungen können sich kurzfristig ändern. Dieser Vergleich gibt den Stand 
-                der Informationen zum Zeitpunkt der Erstellung wieder. Wir übernehmen keine Gewähr für 
-                Vollständigkeit, Richtigkeit oder Aktualität. Verbindliche Angaben erhalten Sie direkt 
-                beim Kartenanbieter.
+                Neben eventuellen Fremdwährungsgebühren der Karte können auch Gebühren seitens der Reederei 
+                oder bei Bargeldabhebungen an Bord anfallen. Zudem kann es bei der Abrechnung am Ende der Reise 
+                zu Wechselkursaufschlägen kommen. Die genauen Konditionen sollten vor Reiseantritt bei der 
+                Reederei und beim Kartenanbieter geprüft werden.
               </p>
             </details>
           </div>

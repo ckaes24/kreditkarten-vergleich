@@ -46,16 +46,17 @@ export default function AuslandPage() {
           <div className="max-w-6xl mx-auto px-4 py-6">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-                Die beste Kreditkarte fürs Ausland – Vergleich 2025
+                Kreditkarten für Auslandsreisen im Vergleich
               </h1>
               <p className="text-gray-600 max-w-prose leading-relaxed">
-                Für Auslandsreisen ist die richtige Kreditkarte entscheidend: Sie sollte weltweit akzeptiert werden, 
-                keine oder geringe Gebühren für Fremdwährungszahlungen erheben und im Idealfall mit Reiseversicherungen 
-                und weiteren Vorteilen ausgestattet sein.
+                Bei Auslandsreisen können verschiedene Anforderungen an Kreditkarten relevant werden: 
+                weltweite Akzeptanz, Gebühren für Fremdwährungszahlungen, Verfügbarkeit von Bargeld, 
+                Einsetzbarkeit als Kaution oder optionale Zusatzleistungen wie Versicherungen.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser Vergleich zeigt Kreditkarten, die sich besonders für internationale Reisen eignen, 
-                und hilft bei der Auswahl der passenden Karte für Urlaub, Geschäftsreisen oder längere Auslandsaufenthalte.
+                Dieser Vergleich stellt Kreditkarten mit unterschiedlichen Merkmalen gegenüber. 
+                Welche Karte geeignet ist, hängt vom individuellen Nutzungsverhalten und Reiseziel ab. 
+                Die Konditionen können je nach Anbieter stark variieren.
               </p>
 
               <div className="flex gap-3">
@@ -164,7 +165,7 @@ export default function AuslandPage() {
               <div className="space-y-3">
                 {best?.id === c.id && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 bg-yellow-50 border border-yellow-400 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                    ⭐ Empfohlen für Reisen
+                    Beste Wahl*
                   </div>
                 )}
 
@@ -263,6 +264,41 @@ export default function AuslandPage() {
           </table>
         </section>
 
+        {/* DISCLAIMER */}
+        <section className="bg-gray-50 rounded-xl p-6 border border-gray-300">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong>* „Beste Wahl"</strong> bezeichnet eine Auswahl, die auf Basis der hier dargestellten 
+            Vergleichskriterien (z. B. Gebühren, Akzeptanz, Versicherungsleistungen) als besonders passend 
+            für dieses Nutzungsszenario erscheint. Dies stellt keine Finanzberatung dar. 
+            Maßgeblich sind die Angaben des jeweiligen Kartenanbieters.
+          </p>
+        </section>
+
+        {/* RECHTLICHE HINWEISE */}
+        <section className="bg-white rounded-xl p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">
+            Rechtliche Hinweise
+          </h2>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              <strong>Keine Finanzberatung:</strong> Die Informationen auf dieser Seite stellen keine Finanz-, 
+              Anlage- oder Rechtsberatung dar. Sie dienen ausschließlich zu Vergleichszwecken.
+            </p>
+            <p>
+              <strong>Änderungen vorbehalten:</strong> Konditionen, Gebühren und Leistungen können sich jederzeit ändern. 
+              Die hier dargestellten Informationen geben den Stand zum Zeitpunkt der Erstellung wieder.
+            </p>
+            <p>
+              <strong>Maßgebliche Angaben:</strong> Verbindliche Informationen zu Konditionen, Versicherungsleistungen 
+              und Gebühren erhalten Sie ausschließlich beim jeweiligen Kartenanbieter.
+            </p>
+            <p>
+              <strong>Affiliate-Hinweis:</strong> Links mit * sind Affiliate-Links. Bei Abschluss über diese Links 
+              erhalten wir ggf. eine Provision, ohne dass Ihnen zusätzliche Kosten entstehen.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -272,12 +308,12 @@ export default function AuslandPage() {
           <div className="space-y-3 text-sm text-gray-700">
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Welche Kreditkarte ist die beste für Auslandsreisen?
+                Welche Kriterien sind bei Kreditkarten für Auslandsreisen relevant?
               </summary>
               <p className="mt-2">
-                Die beste Karte hängt vom individuellen Reiseverhalten ab. Für gelegentliche Urlaubsreisen eignen 
-                sich kostenlose Karten ohne Fremdwährungsgebühr. Vielreisende profitieren oft von Premium-Karten 
-                mit Versicherungen und Lounge-Zugang, auch wenn diese eine Jahresgebühr haben.
+                Relevante Faktoren können sein: Fremdwährungsgebühren, weltweite Akzeptanz des Netzwerks (Visa, Mastercard, Amex), 
+                Konditionen für Bargeldabhebungen, Verfügbarkeit eines Kreditrahmens, optionale Versicherungsleistungen 
+                und eventuelle Jahresgebühren. Die Gewichtung hängt vom individuellen Nutzungsverhalten ab.
               </p>
             </details>
 
@@ -326,12 +362,12 @@ export default function AuslandPage() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Hinweis zu Provisionen und Aktualität
+                Gibt es Unterschiede bei der Akzeptanz verschiedener Kreditkarten-Netzwerke?
               </summary>
-              <p className="mt-2 text-sm text-gray-700">
-                Mit * gekennzeichnete Links sind Affiliate-Links. Bei Abschluss über diese Links erhalten wir ggf. 
-                eine Provision, ohne dass Ihnen zusätzliche Kosten entstehen. Alle Angaben ohne Gewähr – 
-                verbindliche Informationen erhalten Sie beim jeweiligen Anbieter.
+              <p className="mt-2">
+                Visa und Mastercard werden weltweit am häufigsten akzeptiert. American Express ist in manchen Regionen, 
+                insbesondere in Asien und Südamerika, weniger verbreitet. Bei Reisen in weniger touristische Gebiete 
+                kann es sinnvoll sein, mehrere Karten verschiedener Netzwerke dabei zu haben.
               </p>
             </details>
           </div>

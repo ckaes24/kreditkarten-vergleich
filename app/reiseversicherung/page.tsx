@@ -50,15 +50,14 @@ export default function ReiseversicherungPage() {
                 Kreditkarten mit Reiseversicherung im Vergleich
               </h1>
               <p className="text-gray-600 max-w-prose leading-relaxed">
-                Einige Kreditkarten bieten integrierte Reiseversicherungen, die bei Urlaubsreisen, 
-                Geschäftsreisen oder längeren Auslandsaufenthalten nützlich sein können. Der Umfang 
-                reicht von Reiserücktrittsversicherung über Auslandskrankenversicherung bis hin zu 
-                Mietwagenschutz.
+                Manche Kreditkarten beinhalten Versicherungsleistungen, die bei Reisen greifen können. 
+                Der Umfang variiert stark: von Reiserücktritt über Auslandskrankenversicherung bis zu Mietwagenabsicherung. 
+                Die Leistungen sind oft an Bedingungen geknüpft, etwa dass die Reise mit der Karte bezahlt wurde.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser Vergleich zeigt Kreditkarten mit Reiseversicherung und erläutert, worauf bei der 
-                Auswahl zu achten ist. Wichtig: Die Versicherungsbedingungen können stark variieren und 
-                sollten im Detail geprüft werden.
+                Dieser Vergleich stellt Karten mit Versicherungskomponenten gegenüber. Ob diese eine separate 
+                Reiseversicherung ersetzen können, hängt vom individuellen Bedarf und den konkreten Versicherungsbedingungen ab, 
+                die vor Abschluss geprüft werden sollten.
               </p>
 
               <div className="flex gap-3">
@@ -152,7 +151,7 @@ export default function ReiseversicherungPage() {
               <div className="space-y-3">
                 {best?.id === c.id && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 bg-yellow-50 border border-yellow-400 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                    ⭐ Empfohlen
+                    Beste Wahl*
                   </div>
                 )}
 
@@ -251,6 +250,44 @@ export default function ReiseversicherungPage() {
           </table>
         </section>
 
+        {/* DISCLAIMER */}
+        <section className="bg-gray-50 rounded-xl p-6 border border-gray-300">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong>* „Beste Wahl"</strong> bezeichnet eine Auswahl, die auf Basis der hier dargestellten 
+            Vergleichskriterien (z. B. Verfügbarkeit von Versicherungsleistungen, Gebührenstruktur) als 
+            besonders passend für dieses Nutzungsszenario erscheint. Dies stellt keine Finanzberatung dar. 
+            Die Versicherungsbedingungen müssen individuell geprüft werden. Maßgeblich sind die Angaben des 
+            jeweiligen Kartenanbieters und Versicherers.
+          </p>
+        </section>
+
+        {/* RECHTLICHE HINWEISE */}
+        <section className="bg-white rounded-xl p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">
+            Rechtliche Hinweise
+          </h2>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              <strong>Keine Versicherungsberatung:</strong> Die Informationen zu Versicherungsleistungen sind allgemeiner Natur 
+              und stellen keine Versicherungs-, Finanz- oder Rechtsberatung dar. Verbindliche Angaben zum Versicherungsschutz 
+              finden sich ausschließlich in den Versicherungsbedingungen des jeweiligen Anbieters.
+            </p>
+            <p>
+              <strong>Versicherungsbedingungen prüfen:</strong> Vor Abschluss sollten die Versicherungsbedingungen im Detail 
+              geprüft werden. Oft gibt es Ausschlüsse, Höchstgrenzen, Selbstbeteiligungen oder Bedingungen (z. B. Bezahlung 
+              der Reise mit der Karte).
+            </p>
+            <p>
+              <strong>Änderungen vorbehalten:</strong> Konditionen und Versicherungsleistungen können sich jederzeit ändern. 
+              Die Angaben geben den Stand zum Zeitpunkt der Erstellung wieder.
+            </p>
+            <p>
+              <strong>Affiliate-Hinweis:</strong> Links mit * sind Affiliate-Links. Bei Abschluss erhalten wir ggf. 
+              eine Provision, ohne dass Ihnen zusätzliche Kosten entstehen.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -260,13 +297,13 @@ export default function ReiseversicherungPage() {
           <div className="space-y-3 text-sm text-gray-700">
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Ersetzen Kreditkarten-Versicherungen eine separate Reiseversicherung?
+                Können Kreditkarten-Versicherungen eine separate Reiseversicherung ersetzen?
               </summary>
               <p className="mt-2">
-                Das hängt vom Umfang der Versicherung und den persönlichen Bedürfnissen ab. Manche Kreditkarten 
-                bieten umfangreiche Leistungen, die eine separate Versicherung ersetzen können. Oft gibt es aber 
-                Einschränkungen bei Deckungssummen, Reisedauer oder versicherten Personen. Ein Vergleich der 
-                Versicherungsbedingungen ist empfehlenswert.
+                Das hängt vom Umfang der inkludierten Versicherungen und den individuellen Anforderungen ab. 
+                Manche Karten bieten umfangreiche Leistungen, andere nur Basisschutz. Oft gibt es Einschränkungen 
+                bei Deckungssummen, Reisedauer, versicherten Personen oder bestimmte Ausschlüsse. Die Versicherungsbedingungen 
+                sollten vor Reiseantritt im Detail geprüft werden.
               </p>
             </details>
 
@@ -316,23 +353,13 @@ export default function ReiseversicherungPage() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Lohnt sich eine Karte mit Jahresgebühr wegen der Versicherung?
+                Wann kann sich eine Karte mit Jahresgebühr und Versicherung rechnen?
               </summary>
               <p className="mt-2">
-                Das hängt von der Reisehäufigkeit und dem Wert der Versicherungsleistungen ab. Wer mehrmals im Jahr 
-                verreist, kann durch die integrierte Versicherung Kosten sparen. Bei seltenen Reisen kann eine 
-                kostenlose Karte mit einzeln abgeschlossener Reiseversicherung günstiger sein.
-              </p>
-            </details>
-
-            <details>
-              <summary className="cursor-pointer font-medium text-gray-900">
-                Hinweis zu Provisionen und Aktualität
-              </summary>
-              <p className="mt-2 text-sm text-gray-700">
-                Mit * gekennzeichnete Links sind Affiliate-Links. Bei Abschluss erhalten wir ggf. eine Provision, 
-                ohne dass Ihnen zusätzliche Kosten entstehen. Alle Angaben ohne Gewähr – verbindliche Informationen 
-                zu Versicherungsleistungen erhalten Sie beim jeweiligen Anbieter.
+                Das hängt von der Reisehäufigkeit und den Kosten vergleichbarer separater Versicherungen ab. 
+                Bei mehreren Reisen pro Jahr kann eine integrierte Versicherung günstiger sein als Einzelabschlüsse. 
+                Bei seltenen Reisen kann eine kostenlose Karte mit bedarfsweise abgeschlossener Versicherung wirtschaftlicher sein. 
+                Ein individueller Vergleich ist ratsam.
               </p>
             </details>
           </div>

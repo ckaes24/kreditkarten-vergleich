@@ -46,13 +46,13 @@ export default function OhneFremdwaehrungsgebuehrPage() {
                 Kreditkarten ohne Fremdwährungsgebühr im Vergleich
               </h1>
               <p className="text-gray-600 max-w-prose leading-relaxed">
-                Wer im Ausland bezahlt oder online in Fremdwährung einkauft, zahlt bei vielen Kreditkarten eine 
-                Fremdwährungsgebühr – oft zwischen 1 % und 2 % des Umsatzes. Kreditkarten ohne diese Gebühr 
-                können bei regelmäßigen Auslandszahlungen spürbare Einsparungen bringen.
+                Bei Zahlungen in Fremdwährung – etwa im Ausland oder bei Online-Käufen – erheben viele Banken 
+                eine Fremdwährungsgebühr, typischerweise zwischen 1 % und 2 % des Umsatzes. 
+                Einige Kreditkarten verzichten auf diese Gebühr.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser Vergleich zeigt ausschließlich Kreditkarten, die keine Fremdwährungsgebühr erheben, 
-                und hilft dabei, die passende Karte für internationale Zahlungen zu finden.
+                Dieser Vergleich stellt Kreditkarten gegenüber, die nach Angaben der Anbieter keine Fremdwährungsgebühr erheben. 
+                Ob sich eine solche Karte lohnt, hängt von der Häufigkeit und Höhe der Auslandsumsätze ab.
               </p>
 
               <div className="flex gap-3">
@@ -130,7 +130,7 @@ export default function OhneFremdwaehrungsgebuehrPage() {
               <div className="space-y-3">
                 {best?.id === c.id && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 bg-yellow-50 border border-yellow-400 text-yellow-700 px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                    ⭐ Empfohlen
+                    Beste Wahl*
                   </div>
                 )}
 
@@ -227,6 +227,39 @@ export default function OhneFremdwaehrungsgebuehrPage() {
           </table>
         </section>
 
+        {/* DISCLAIMER */}
+        <section className="bg-gray-50 rounded-xl p-6 border border-gray-300">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong>* „Beste Wahl"</strong> bezeichnet eine Auswahl, die auf Basis der hier dargestellten 
+            Vergleichskriterien (z. B. Jahresgebühr, zusätzliche Leistungen) als besonders passend erscheint. 
+            Dies stellt keine Finanzberatung dar. Maßgeblich sind die Angaben des jeweiligen Kartenanbieters.
+          </p>
+        </section>
+
+        {/* RECHTLICHE HINWEISE */}
+        <section className="bg-white rounded-xl p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">
+            Rechtliche Hinweise
+          </h2>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              <strong>Keine Finanzberatung:</strong> Die Informationen dienen ausschließlich zu Vergleichszwecken 
+              und stellen keine Finanz-, Anlage- oder Rechtsberatung dar.
+            </p>
+            <p>
+              <strong>Änderungen vorbehalten:</strong> Konditionen können sich jederzeit ändern. 
+              Die Angaben geben den Stand zum Zeitpunkt der Erstellung wieder.
+            </p>
+            <p>
+              <strong>Maßgebliche Angaben:</strong> Verbindliche Informationen erhalten Sie beim jeweiligen Kartenanbieter.
+            </p>
+            <p>
+              <strong>Affiliate-Hinweis:</strong> Links mit * sind Affiliate-Links. Bei Abschluss erhalten wir ggf. 
+              eine Provision, ohne dass Ihnen zusätzliche Kosten entstehen.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -258,12 +291,12 @@ export default function OhneFremdwaehrungsgebuehrPage() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Lohnt sich eine kostenlose Karte ohne Fremdwährungsgebühr?
+                Für wen kann eine Karte ohne Fremdwährungsgebühr relevant sein?
               </summary>
               <p className="mt-2">
-                Wenn Sie regelmäßig im Ausland bezahlen oder online in Fremdwährung einkaufen, kann sich eine Karte 
-                ohne Fremdwährungsgebühr schnell lohnen. Bei 2.000 € Auslandsumsatz im Jahr sparen Sie bei einer 
-                Gebühr von 2 % bereits 40 €.
+                Eine Karte ohne Fremdwährungsgebühr kann bei regelmäßigen Auslandszahlungen oder häufigen Online-Käufen 
+                in Fremdwährung Kosten sparen. Die Ersparnis hängt von der Höhe und Häufigkeit der Umsätze ab. 
+                Bei gelegentlicher Nutzung kann der Unterschied gering sein.
               </p>
             </details>
 
@@ -291,12 +324,12 @@ export default function OhneFremdwaehrungsgebuehrPage() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Hinweis zu Provisionen und Aktualität
+                Können neben der Fremdwährungsgebühr weitere Kosten anfallen?
               </summary>
               <p className="mt-2 text-sm text-gray-700">
-                Mit * gekennzeichnete Links sind Affiliate-Links. Wenn Sie über einen solchen Link eine Karte 
-                beantragen, erhalten wir ggf. eine Provision. Für Sie entstehen keine zusätzlichen Kosten. 
-                Alle Angaben ohne Gewähr – verbindliche Informationen erhalten Sie beim jeweiligen Anbieter.
+                Ja. Auch bei Karten ohne Fremdwährungsgebühr können andere Kosten entstehen, etwa für Bargeldabhebungen, 
+                Jahresgebühren oder durch ungünstige Wechselkurse bei der Dynamic Currency Conversion (DCC). 
+                Die Gesamtkosten sollten individuell geprüft werden.
               </p>
             </details>
           </div>
