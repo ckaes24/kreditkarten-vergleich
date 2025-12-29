@@ -125,7 +125,7 @@ export const cards: CreditCard[] = [
     loungeAccess: false,
     creditCheck: true,
     requiresNewGiro: true,
-    cardType: 'Credit',
+    cardType: 'Debit',
     cashWithdrawal: 'Möglich',
     network: 'Mastercard',
     applyUrl: 'https://a.check24.net/misc/click.php?pid=725718&aid=18&deep=c24bank&cat=14',
