@@ -87,7 +87,7 @@ export default function Home() {
               <div className="space-y-3">
                 {best?.id === c.id && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10 bg-yellow-50 border border-yellow-400 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">
-                    ⭐ Beste Wahl
+                    Beste Wahl*
                   </div>
                 )}
 
@@ -191,6 +191,44 @@ export default function Home() {
           </table>
         </section>
 
+        {/* DISCLAIMER */}
+        <section className="bg-gray-50 rounded-xl p-6 border border-gray-300">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong>* „Beste Wahl"</strong> bezeichnet eine Auswahl, die auf Basis der hier dargestellten 
+            Vergleichskriterien (z. B. Gebühren, Leistungen, Akzeptanz) als besonders ausgewogen erscheint. 
+            Dies stellt keine Finanzberatung dar. Maßgeblich sind die Angaben des jeweiligen Kartenanbieters.
+          </p>
+        </section>
+
+        {/* RECHTLICHE HINWEISE */}
+        <section className="bg-white rounded-xl p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">
+            Rechtliche Hinweise
+          </h2>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              <strong>Keine Finanzberatung:</strong> Die Informationen auf dieser Website stellen keine Finanz-, 
+              Anlage- oder Rechtsberatung dar. Sie dienen ausschließlich zu Vergleichszwecken.
+            </p>
+            <p>
+              <strong>Änderungen vorbehalten:</strong> Konditionen, Gebühren und Leistungen können sich jederzeit ändern. 
+              Die hier dargestellten Informationen geben den Stand zum Zeitpunkt der Erstellung wieder.
+            </p>
+            <p>
+              <strong>Maßgebliche Angaben:</strong> Verbindliche Informationen zu Konditionen, Versicherungsleistungen 
+              und Gebühren erhalten Sie ausschließlich beim jeweiligen Kartenanbieter.
+            </p>
+            <p>
+              <strong>Affiliate-Hinweis:</strong> Links mit * sind Affiliate-Links. Bei Abschluss über diese Links 
+              erhalten wir ggf. eine Provision vom Anbieter, ohne dass Ihnen zusätzliche Kosten entstehen.
+            </p>
+            <p>
+              <strong>Haftungsausschluss:</strong> Wir übernehmen keine Gewähr für die Vollständigkeit, Richtigkeit 
+              oder Aktualität der Angaben. Alle Angaben ohne Gewähr.
+            </p>
+          </div>
+        </section>
+
         {/* FAZIT */}
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <h2 className="text-2xl font-bold mb-3 text-gray-900">
@@ -214,23 +252,22 @@ export default function Home() {
           <div className="space-y-3 text-sm text-gray-700">
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Welche Kreditkarte eignet sich besonders für Reisen?
+                Welche Kriterien sind bei der Auswahl einer Kreditkarte wichtig?
               </summary>
               <p className="mt-2">
-                Für Reisen sind Kreditkarten ohne Auslandseinsatzgebühr und mit
-                integrierter Reiseversicherung besonders sinnvoll. Optional kann
-                Loungezugang zusätzlichen Komfort bieten.
+                Relevante Faktoren können sein: Jahresgebühr, Fremdwährungsgebühren, weltweite Akzeptanz, 
+                optionale Versicherungsleistungen, Loungezugang und Konditionen für Bargeldabhebungen. 
+                Die Gewichtung hängt vom individuellen Nutzungsverhalten ab.
               </p>
             </details>
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Kostet mich der Abschluss über diese Seite mehr?
+                Entstehen bei Abschluss über diese Seite zusätzliche Kosten?
               </summary>
               <p className="mt-2">
-                Nein. Wenn du über einen mit * gekennzeichneten Link eine Karte
-                beantragst, erhalten wir ggf. eine Provision vom Anbieter. Für dich
-                entstehen keine zusätzlichen Kosten.
+                Nein. Bei Abschluss über einen mit * gekennzeichneten Link erhalten wir ggf. eine Provision 
+                vom Anbieter. Für Sie entstehen dadurch keine zusätzlichen Kosten.
               </p>
             </details>
 
@@ -247,20 +284,12 @@ export default function Home() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Wird der Vergleich regelmäßig aktualisiert?
+                Wie aktuell sind die Informationen?
               </summary>
               <p className="mt-2">
-                Ja. Konditionen und Leistungen können sich ändern. Wir bemühen uns,
-                alle Angaben regelmäßig zu prüfen und anzupassen.
-              </p>
-            </details>
-
-            <details>
-              <summary className="cursor-pointer font-medium text-gray-900">
-                Hinweis zur Aktualität und Haftung
-              </summary>
-              <p className="mt-2 text-sm text-gray-700">
-                Konditionen, Preise und Leistungen können sich kurzfristig ändern. Dieser Vergleich gibt den Stand der Informationen nach bestem Wissen und Gewissen zum Zeitpunkt des Vergleichs wieder. Wir übernehmen keine Gewähr für Vollständigkeit, Richtigkeit oder Aktualität; verbindliche Angaben erhältst du direkt beim Kartenanbieter.
+                Wir bemühen uns, alle Angaben regelmäßig zu prüfen und anzupassen. 
+                Da sich Konditionen jederzeit ändern können, empfehlen wir, vor Abschluss 
+                die aktuellen Bedingungen beim jeweiligen Anbieter zu prüfen.
               </p>
             </details>
           </div>
