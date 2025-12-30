@@ -12,6 +12,7 @@ export default function Navigation() {
     { href: '/', label: 'Alle Kreditkarten' },
     { href: '/ohne-fremdwaehrungsgebuehr', label: 'Weltweit kostenlos' },
     { href: '/ausland', label: 'Beste Reisekarte' },
+    { href: '/usa', label: 'USA-Reisen' },
     { href: '/reiseversicherung', label: 'Mit Versicherung' },
     { href: '/kreuzfahrten', label: 'Kreuzfahrten' },
   ]
