@@ -1,12 +1,9 @@
 "use client"
 
-import type { Metadata } from 'next'
 import { useMemo, useState } from 'react'
 import { cards } from '@/data/creditcards'
 
-// SEO Metadata wird im layout.tsx gesetzt
-
-export default function Home() {
+export default function HomeClient() {
   const [free, setFree] = useState(false)
   const [insurance, setInsurance] = useState(false)
   const [lounge, setLounge] = useState(false)
@@ -255,7 +252,7 @@ export default function Home() {
           <div className="space-y-3 text-sm text-gray-700">
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Welche Kreditkarte ist die beste für Reisen 2026?
+                Welche Kreditkarte ist die beste für Reisen?
               </summary>
               <p className="mt-2">
                 Die beste Reisekreditkarte hängt von Ihren individuellen Bedürfnissen ab. Wichtige Kriterien sind: 
@@ -266,7 +263,7 @@ export default function Home() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Was ist der Unterschied zwischen Credit Card und Debit Card?
+                Was ist der Unterschied zwischen Credit und Debit Kreditkarten?
               </summary>
               <p className="mt-2">
                 Credit Cards bieten einen Kreditrahmen und werden monatlich abgerechnet, während Debit Cards direkt 
@@ -277,7 +274,7 @@ export default function Home() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Welche Kriterien sind bei der Auswahl wichtig?
+                Welche Kriterien sind bei der Auswahl einer Kreditkarte wichtig?
               </summary>
               <p className="mt-2">
                 Relevante Faktoren können sein: Jahresgebühr, Fremdwährungsgebühren, weltweite Akzeptanz, 
@@ -288,7 +285,7 @@ export default function Home() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Sind kostenlose Kreditkarten wirklich komplett gebührenfrei?
+                Sind kostenlose Kreditkarten wirklich komplett kostenlos?
               </summary>
               <p className="mt-2">
                 Karten ohne Jahresgebühr sind im Grundpreis kostenlos. Zusätzliche Kosten können aber für 
@@ -299,55 +296,33 @@ export default function Home() {
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Welche Kreditkarte ist am besten für Auslandsreisen?
-              </summary>
-              <p className="mt-2">
-                Für Auslandsreisen eignen sich Karten mit 0% Fremdwährungsgebühr, weltweiter Akzeptanz (Visa/Mastercard) 
-                und optionalen Reiseversicherungen. Beliebte Optionen sind DKB Visa Debitkarte, Hanseatic GenialCard 
-                oder Premium-Karten mit Versicherungsschutz. Vergleichen Sie die Konditionen für Ihre Reiseziele.
-              </p>
-            </details>
-
-            <details>
-              <summary className="cursor-pointer font-medium text-gray-900">
-                Was kostet eine Kreditkarte ohne Jahresgebühr wirklich?
-              </summary>
-              <p className="mt-2">
-                Viele Karten sind dauerhaft ohne Jahresgebühr erhältlich. Kosten können aber bei 
-                Bargeldabhebungen (oft 1,5-4% des Betrags), Fremdwährungsgebühren (1-2%) oder 
-                Teilzahlungen anfallen. Achten Sie auf die Gesamtkonditionen, nicht nur auf die fehlende Jahresgebühr.
-              </p>
-            </details>
-
-            <details>
-              <summary className="cursor-pointer font-medium text-gray-900">
-                Entstehen durch Affiliate-Links zusätzliche Kosten?
+                Entstehen bei Abschluss über diese Seite zusätzliche Kosten?
               </summary>
               <p className="mt-2">
                 Nein. Bei Abschluss über einen mit * gekennzeichneten Link erhalten wir ggf. eine Provision 
-                vom Anbieter. Für Sie entstehen dadurch keine zusätzlichen Kosten. Die Konditionen bleiben identisch.
+                vom Anbieter. Für Sie entstehen dadurch keine zusätzlichen Kosten.
               </p>
             </details>
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Warum gibt es so große Unterschiede bei den Leistungen?
+                Warum unterscheiden sich Leistungen und Gebühren so stark?
               </summary>
               <p className="mt-2">
-                Kreditkarten richten sich an unterschiedliche Zielgruppen. Premium-Karten 
-                mit Zusatzleistungen wie Versicherungen, Bonusprogrammen oder Loungezugang haben
-                meist höhere Gebühren als einfache Basiskarten. Wählen Sie je nach Ihrem Reiseverhalten.
+                Kreditkarten richten sich an unterschiedliche Zielgruppen. Karten
+                mit Zusatzleistungen wie Versicherungen oder Bonusprogrammen haben
+                meist höhere Gebühren als einfache Basiskarten.
               </p>
             </details>
 
             <details>
               <summary className="cursor-pointer font-medium text-gray-900">
-                Wie aktuell sind die Informationen im Vergleich?
+                Wie aktuell sind die Informationen auf dieser Seite?
               </summary>
               <p className="mt-2">
-                Wir bemühen uns, alle Angaben regelmäßig zu prüfen und anzupassen (Stand: 2026). 
+                Wir bemühen uns, alle Angaben regelmäßig zu prüfen und anzupassen. 
                 Da sich Konditionen jederzeit ändern können, empfehlen wir, vor Abschluss 
-                die aktuellen Bedingungen direkt beim jeweiligen Anbieter zu prüfen.
+                die aktuellen Bedingungen beim jeweiligen Anbieter zu prüfen.
               </p>
             </details>
           </div>

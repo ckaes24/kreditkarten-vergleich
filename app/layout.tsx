@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import CookieBanner from "../components/CookieBanner";
 import GoogleAnalytics from "../components/GoogleAnalytics";
+import StructuredData from "../components/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +18,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kreditkarten Vergleich – die besten Karten für Reisen & Alltag",
+  title: {
+    default: "Kreditkarten Vergleich 2026 – Die besten Kreditkarten für Reisen & Alltag",
+    template: "%s | Kreditkarten Vergleich"
+  },
   description:
-    "Vergleiche die besten Kreditkarten für Reisen, Auslandseinsatzgebühren, Versicherungen und Loungezugang.",
+    "Vergleichen Sie die besten Kreditkarten für Reisen: ohne Jahresgebühr, ohne Auslandseinsatzgebühr, mit Versicherung & Loungezugang. Unabhängiger Vergleich 2026.",
+  keywords: [
+    "Kreditkarten Vergleich",
+    "beste Kreditkarte",
+    "Reisekreditkarte",
+    "kostenlose Kreditkarte",
+    "ohne Jahresgebühr",
+    "ohne Auslandseinsatzgebühr",
+    "Kreditkarte mit Versicherung",
+    "Visa",
+    "Mastercard"
+  ],
+  authors: [{ name: "Kreditkarten Vergleich" }],
+  creator: "Kreditkarten Vergleich",
+  publisher: "Kreditkarten Vergleich",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://kreditkarten-vergleich.de'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Kreditkarten Vergleich 2026 – Die besten Kreditkarten für Reisen",
+    description: "Vergleichen Sie die besten Kreditkarten für Reisen: ohne Jahresgebühr, ohne Auslandseinsatzgebühr, mit Versicherung & Loungezugang.",
+    url: 'https://kreditkarten-vergleich.de',
+    siteName: 'Kreditkarten Vergleich',
+    locale: 'de_DE',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +81,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 text-gray-800 flex flex-col min-h-screen`}
       >
+        <StructuredData />
         <GoogleAnalytics />
         <Navigation />
         
