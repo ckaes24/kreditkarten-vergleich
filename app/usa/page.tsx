@@ -59,7 +59,7 @@ export default function USAPage() {
                 nicht akzeptiert oder nur mit Einschränkungen.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser Vergleich zeigt Karten mit Eigenschaften, die für USA-Reisen relevant sein können. 
+                Dieser <a href="/" className="text-orange-600 hover:underline">Kreditkarten-Vergleich</a> zeigt Karten mit Eigenschaften, die für USA-Reisen relevant sein können. 
                 Die Auswahl basiert auf den gewählten Filterkriterien. Ob eine Karte geeignet ist, hängt 
                 vom individuellen Nutzungsverhalten ab.
               </p>
@@ -119,7 +119,7 @@ export default function USAPage() {
               <h3 className="font-semibold text-gray-900 mb-2">🏨 Hotelbuchungen</h3>
               <p>
                 Hotels autorisieren bei Check-in einen Betrag auf der Kreditkarte als Kaution für 
-                Nebenkosten. Ohne Kreditkarte kann die Buchung erschwert oder abgelehnt werden.
+                Nebenkosten. Ohne Kreditkarte kann die Buchung erschwert oder abgelehnt werden. Ähnliche Anforderungen gelten auch für <a href="/kreuzfahrten" className="text-orange-600 hover:underline">Kreditkarten für Kreuzfahrten</a>.
               </p>
             </div>
 
