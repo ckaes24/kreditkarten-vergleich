@@ -54,6 +54,20 @@ const pageData: SEOPageData = {
   title: 'Kreditkarte Philippinen ohne Gebühren | Beste Karten für Pesos',
   description: 'Vergleich der besten Kreditkarten ohne Fremdwährungsgebühr für die Philippinen. Spare bei Zahlungen und Abhebungen in Pesos.',
 };
+const AutorenBox = () => (
+  <section className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-300 rounded-2xl p-8 mb-12 mt-8">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <div className="flex-shrink-0">
+        <img src="/partner-logo.png" alt="Chris Abenteuer-Atlas.de" className="w-20 h-20 rounded-full border-4 border-blue-200 shadow-lg" />
+      </div>
+      <div>
+        <p className="text-blue-900 leading-relaxed text-base md:text-lg">
+          Hi, ich bin Chris von Abenteuer-Atlas.de. Ich bereise die Welt und habe diesen Finder gebaut, weil ich selbst oft genug Gebühren-Abzocke oder abgelehnte Karten erlebt habe. Diese Tipps basieren auf echter Reiseerfahrung.
+        </p>
+      </div>
+    </div>
+  </section>
+);
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -61,5 +75,8 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <AutorenBox />
+  </>;
 }

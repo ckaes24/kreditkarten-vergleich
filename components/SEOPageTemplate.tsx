@@ -99,7 +99,7 @@ export default function SEOPageTemplate({
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
+      <div className="bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 text-blue-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
@@ -109,7 +109,7 @@ export default function SEOPageTemplate({
             <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
               Die beste Kreditkarte für<br /><span className="text-blue-200">{keyword}</span>
             </h1>
-            <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12 text-blue-50 font-light">
+            <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12 text-blue-900 font-light">
               {intro}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -378,11 +378,13 @@ export default function SEOPageTemplate({
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               🔍 Alle Kreditkarten im Detail
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               Entdecken Sie unser vollständiges Angebot
             </p>
           </div>
-          <CreditCards />
+          <div className="text-gray-900">
+            <CreditCards />
+          </div>
         </section>
 
         {/* Related Pages */}
@@ -412,16 +414,16 @@ export default function SEOPageTemplate({
           </div>
         </section>
 
-        {/* E-E-A-T Autorenbox */}
+        {/* Vertrauensbox */}
         <section className="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-2xl p-8 mb-12">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <div className="flex-shrink-0">
-              <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" alt="Chris Abenteuer-Atlas.de" className="w-24 h-24 rounded-full border-4 border-blue-300 shadow-lg" />
+              <img src="/partner-logo.png" alt="Kreditkarten-Finder.de" className="w-24 h-24 rounded-full border-4 border-blue-200 shadow-lg" />
             </div>
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">Geprüft von Chris (Abenteuer-Atlas.de)</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">Unabhängige Redaktion</h3>
               <p className="text-blue-900 leading-relaxed text-base md:text-lg">
-                Hi, ich bin Chris. Gemeinsam mit meinem Team von Abenteuer-Atlas.de bereise ich die Welt. Ich habe auf meinen Reisen schon oft erlebt, wie man im Ausland durch falsche Kreditkarten abgezockt wird oder plötzlich der Mietwagen verweigert wird. Dieser Finder basiert auf echten Reiseerfahrungen, damit dir das nicht passiert!
+                Alle Empfehlungen und Vergleiche basieren auf echten Erfahrungen und sorgfältiger Recherche. Unser Ziel: Die beste Kreditkarte für deine Reise – transparent, unabhängig und aktuell.
               </p>
             </div>
           </div>
