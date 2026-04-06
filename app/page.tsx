@@ -6,7 +6,7 @@ import { cards } from '@/data/creditcards'
 
 // SEO Metadata wird im layout.tsx gesetzt
 
-export default function Home() {
+export default function Page() {
   const [free, setFree] = useState(false)
   const [insurance, setInsurance] = useState(false)
   const [lounge, setLounge] = useState(false)
