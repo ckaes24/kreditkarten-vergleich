@@ -6,7 +6,7 @@ import { cards } from '@/data/creditcards'
 // Next.js 13+ Metadata wird über layout.tsx und generateMetadata exportiert
 // Für client components nutzen wir nächste/head im useEffect
 
-export default function AuslandPage() {
+export default function Page() {
   const [noFxFee, setNoFxFee] = useState(false)
   const [insurance, setInsurance] = useState(false)
   const [free, setFree] = useState(false)

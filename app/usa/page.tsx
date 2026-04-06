@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react'
 import { cards } from '@/data/creditcards'
 
-export default function USAPage() {
+export default function Page() {
   const [creditCard, setCreditCard] = useState(false)
   const [noFxFee, setNoFxFee] = useState(false)
   const [free, setFree] = useState(false)

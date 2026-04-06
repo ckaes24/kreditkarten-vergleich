@@ -1,4 +1,4 @@
-export default function Impressum() {
+export default function Page() {
   return (
     <main className="min-h-screen bg-gray-100 text-gray-800">
       <div className="max-w-3xl mx-auto p-6">

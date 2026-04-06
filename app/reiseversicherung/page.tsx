@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react'
 import { cards } from '@/data/creditcards'
 
-export default function ReiseversicherungPage() {
+export default function Page() {
   const [free, setFree] = useState(false)
   const [noFxFee, setNoFxFee] = useState(false)
   const [lounge, setLounge] = useState(false)
