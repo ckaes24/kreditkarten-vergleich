@@ -1,12 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
-
-interface SEOCreditCard {
-  name: string;
-  pros: string[];
-  cons: string[];
-  affiliateLink: string;
-}
+import { SEOCreditCard } from '../../data/seoCreditCards';
 
 interface FAQItem {
   question: string;
@@ -87,5 +81,3 @@ export const metadata: Metadata = {
 export default function Page() {
   return <SEOPageTemplate {...pageData} />;
 }
-
-Geänderte Datei: app/kreditkarte-japan-ohne-gebuehren/page.tsx

@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+"use client";
+
 import CreditCards from './CreditCards';
 import { SEOCreditCard } from '../data/seoCreditCards';
 

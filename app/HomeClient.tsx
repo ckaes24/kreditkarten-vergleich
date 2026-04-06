@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useMemo, useState } from 'react'
 import { cards } from '@/data/creditcards'
@@ -39,24 +39,24 @@ export default function HomeClient() {
                   Kreditkarten für Reisen & Alltag im Vergleich
                 </h1>
                 <p className="text-gray-600 max-w-prose">
-                  Wir vergleichen unabhängig und klar — damit du die Karte findest, die zu deinen Reisen und deinem Alltag passt.
+                  Wir vergleichen unabhaengig und klar - damit du die Karte findest, die zu deinen Reisen und deinem Alltag passt.
                 </p>
 
                 <div className="flex gap-3">
                   <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm shadow">Jetzt vergleichen</a>
-                  <button onClick={() => setRecommended(!recommended)} className="inline-block bg-white border border-gray-200 hover:border-gray-300 text-gray-700 py-2 px-4 rounded-md text-sm">Top‑Empfehlungen</button>
+                  <button onClick={() => setRecommended(!recommended)} className="inline-block bg-white border border-gray-200 hover:border-gray-300 text-gray-700 py-2 px-4 rounded-md text-sm">Top-Empfehlungen</button>
                 </div>
 
-                <p className="text-sm text-gray-600 mt-3 max-w-prose">Unabhängiger Vergleich — klar & transparent.</p>
+                <p className="text-sm text-gray-600 mt-3 max-w-prose">Unabhaengiger Vergleich - klar & transparent.</p>
               </div>
 
               <div>
                 <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-lg p-6 shadow-sm">
-                  <h3 className="text-sm font-semibold text-gray-900">So funktioniert's</h3>
+                  <h3 className="text-sm font-semibold text-gray-900">So funktioniert&apos;s</h3>
                   <ol className="mt-3 text-sm text-gray-700 space-y-2 list-decimal list-inside">
                     <li>Filter auswählen (z. B. keine Jahresgebühr)</li>
                     <li>Karten vergleichen und Leistungen prüfen</li>
-                    <li>Über den markierten Link zur Anbieterseite</li>
+                    <li>Ueber den markierten Link zur Anbieterseite</li>
                   </ol>
                   <div className="mt-4">
                     <a href="#cards" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-md text-sm">Zum Vergleich</a>

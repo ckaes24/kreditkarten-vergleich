@@ -1,12 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
-
-interface SEOCreditCard {
-  name: string;
-  pros: string[];
-  cons: string[];
-  affiliateLink: string;
-}
+import { SEOCreditCard } from '../../data/seoCreditCards';
 
 interface FAQItem {
   question: string;
