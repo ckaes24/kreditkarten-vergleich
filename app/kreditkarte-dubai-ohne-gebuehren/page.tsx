@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Dubai ohne Gebühren',
-  intro: 'Dubai nutzt viele Karten, aber Gebühren können schnell hoch sein. Eine Karte ohne Fremdwährungsgebühr senkt die Kosten bei Dirham-Zahlungen.',
+  intro: 'In Dubai funktionieren Karten sehr gut, aber Hotelkautionen und Dynamic Currency Conversion koennen teuer werden. Mit DKB Visa entfaellt als Aktivkunde (mind. 700 EUR Geldeingang/Monat) die Fremdwaehrungsgebuehr weltweit, was besonders bei groesseren Hotel- und Shopping-Umsaetzen hilft.',
   topRecommendation: {
     name: 'DKB Visa',
     pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Dubai weit akzeptiert', 'Starke Wahl für Bezahlen und Notfall-Abheben'],
@@ -48,16 +48,16 @@ const pageData: SEOPageData = {
   ],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa kannst du als Aktivkunde die Fremdwährungsgebühr sparen, aber lokale Kartenakzeptanz und ATM-Gebühren bleiben.',
+      question: 'Welche Kreditkarte fuer Dubai ohne Fremdwaehrungsgebuehr?',
+      answer: 'Eine Karte ohne Fremdwaehrungsgebuehr ist fuer Dubai wichtig. DKB Visa ist als Aktivkunde weltweit ohne Fremdwaehrungsgebuehr einsetzbar.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Dubai ist DKB Visa die beste Allround-Wahl. Amex Gold ist nur zu empfehlen, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'Was ist der groesste Kostenfehler bei Kartenzahlung in Dubai?',
+      answer: 'Die Abrechnung in EUR statt AED am Terminal. Waehle immer AED, sonst zahlst du durch schlechten Wechselkurs oft mehr.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen lokale Gebühren. Spare die Fremdwährungsgebühr, aber rechne mit 3-5 AED pro Abhebung.',
+      question: 'Soll ich in Dubai in Euro oder AED bezahlen?',
+      answer: 'Immer in AED zahlen. Die EUR-Abrechnung (DCC) ist fast immer nachteilig.',
     },
     {
       question: 'Sollte ich in Euro oder Dirham zahlen?',

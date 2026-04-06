@@ -25,25 +25,25 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Beste Kreditkarte Urlaub',
-  intro: 'Für den Urlaub brauchst du eine Karte, die keine Fremdwährungsgebühr verlangt und in vielen Ländern akzeptiert wird. DKB Visa ist die pragmatische Wahl.',
+  intro: 'Die beste Kreditkarte fuer den Urlaub spart nicht nur Gebuehren, sondern verhindert auch Stress bei Akzeptanzproblemen. Besonders wichtig sind Fremdwaehrungskosten, ATM-Nebenkosten und DCC-Fallen. DKB Visa ist als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr nutzbar.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber zusätzliche Ortskosten können bleiben.',
+      question: 'Welche ist die beste Kreditkarte fuer den Urlaub ohne Gebuehren?',
+      answer: 'Achte auf 0 EUR Jahresgebuehr, niedrige Auslandskosten und hohe Akzeptanz. DKB Visa ist als Aktivkunde bei Fremdwaehrung besonders stark.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Urlaub ist DKB Visa die beste Wahl, wenn du regelmäßig im Ausland zahlst. Amex Gold ist nur sinnvoll, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'DKB Visa im Urlaub: Wann gilt 0 Prozent Fremdwaehrungsgebuehr?',
+      answer: 'Mit Aktivstatus, also bei mindestens 700 EUR monatlichem Geldeingang. Ohne Aktivstatus faellt die Fremdwaehrungsgebuehr an.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen Gebühren. Spare die Fremdwährungsgebühr, aber rechne mit lokalen Automatenkosten.',
+      question: 'Wie vermeide ich hohe ATM-Gebuehren im Urlaub?',
+      answer: 'Hebe seltener und in groesseren Betraegen ab, meide teure Betreiberautomaten und nutze sichere Bankstandorte.',
     },
     {
-      question: 'Sollte ich in Euro oder Landeswährung zahlen?',
-      answer: 'Immer in der Landeswährung zahlen. Euro-Abrechnung ist meist deutlich teurer.',
+      question: 'Soll ich im Urlaub in Euro oder Landeswaehrung zahlen?',
+      answer: 'Immer in Landeswaehrung zahlen. Die Euro-Abrechnung am Terminal ist meist deutlich teurer.',
     },
   ],
   relatedPages: [

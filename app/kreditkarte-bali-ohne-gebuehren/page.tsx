@@ -25,25 +25,25 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Bali ohne Gebühren',
-  intro: 'Auf Bali brauchst du oft Bargeld und zahlst ATM-Gebühren. Eine Karte ohne Fremdwährungsgebühren reduziert die Kosten bei jeder Zahlung in Rupiah.',
+  intro: 'Auf Bali entsteht der groesste Kostenblock oft durch lokale ATM-Gebuehren und schlechte EUR-Umrechnung am Terminal. Mit einer passenden Reisekarte kannst du diese Fallen vermeiden. Wichtig bei DKB Visa: Als Aktivkunde mit mindestens 700 EUR Geldeingang pro Monat faellt weltweit keine Fremdwaehrungsgebuehr an.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa kannst du als Aktivkunde die Fremdwährungsgebühren sparen, aber lokale ATM-Gebühren bleiben.',
+      question: 'Welche Kreditkarte fuer Bali ohne Fremdwaehrungsgebuehr?',
+      answer: 'Fuer Bali ist eine Karte ohne Fremdwaehrungsgebuehr zentral. DKB Visa ist dafuer als Aktivkunde besonders stark; ohne Aktivstatus fallen 1,75% an.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'DKB Visa ist die beste Wahl für Bali, wenn du Aktivkunde bist. Amex Gold ist nur sinnvoll, wenn du sie sicher verwenden kannst.',
+      question: 'Wie hoch sind ATM-Gebuehren auf Bali?',
+      answer: 'Viele Automaten berechnen fixe Zusatzkosten. Deshalb lieber in weniger, aber groesseren Betraegen abheben statt haeufig kleine Summen.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele BALi-ATMs verlangen 220.000 Rupiah oder mehr Gebühren. Spare die Fremdwährungsgebühr, aber rechne mit ATM-Kosten.',
+      question: 'Soll ich auf Bali in Euro oder Rupiah bezahlen?',
+      answer: 'Immer in Rupiah zahlen. Die Euro-Abrechnung (DCC) ist in der Regel deutlich teurer.',
     },
     {
-      question: 'Sollte ich in Euro oder Rupiah zahlen?',
-      answer: 'Immer in Rupiah zahlen. Euro-Abrechnung hat schlechtere Wechselkurse und ist oft 5-10% teurer.',
+      question: 'Brauche ich auf Bali Bargeld trotz Kreditkarte?',
+      answer: 'Ja, vor allem fuer kleinere Warungs, Fahrer und lokale Dienstleistungen. Karte plus Bargeldreserve ist die praktikabelste Kombination.',
     },
   ],
   relatedPages: [

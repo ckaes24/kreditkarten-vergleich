@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Kanada ohne Gebühren',
-  intro: 'Kanada ist der USA ähnlich: Fremdwährungsgebühren treffen jede Kreditkartenzahlung. Eine Karte ohne solche Gebühren senkt die Kosten bei Kanadischem Dollar deutlich.',
+  intro: 'In Kanada ist Kartenzahlung sehr einfach, aber Fremdwaehrungsgebuehren und ATM-Kosten koennen sich bei laengeren Reisen deutlich summieren. DKB Visa ist als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr nutzbar und damit eine starke Alltagsloesung.',
   topRecommendation: {
     name: 'DKB Visa',
     pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Kanada breit akzeptiert', 'Starke Option für Bezahlen und Abheben'],
@@ -48,16 +48,16 @@ const pageData: SEOPageData = {
   ],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa kannst du als Aktivkunde die Fremdwährungsgebühr sparen, aber lokale Abhebegebühren können bleiben.',
+      question: 'Welche Kreditkarte fuer Kanada ohne Fremdwaehrungsgebuehr?',
+      answer: 'Wichtig ist eine Karte ohne Fremdwaehrungsgebuehr. DKB Visa bietet das weltweit mit Aktivstatus (mind. 700 EUR monatlicher Geldeingang).',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Kanada ist DKB Visa als Aktivkunde die beste Wahl. Amex Gold ist nur sinnvoll, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'Wie hoch sind ATM-Gebuehren in Kanada?',
+      answer: 'Je nach Betreiber fallen fixe Gebuehren pro Abhebung an. Deshalb lieber weniger oft und in groesseren Betraegen abheben.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen Gebühren. Spare die Fremdwährungsgebühr, aber rechne mit 3-5 CAD pro Abhebung.',
+      question: 'Soll ich in Kanada in Euro oder CAD zahlen?',
+      answer: 'Immer in CAD zahlen. Die EUR-Abrechnung am Terminal ist in der Regel teurer.',
     },
     {
       question: 'Sollte ich in Euro oder CAD zahlen?',

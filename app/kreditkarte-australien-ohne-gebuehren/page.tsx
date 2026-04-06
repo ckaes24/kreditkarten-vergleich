@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Australien ohne Gebühren',
-  intro: 'In Australien ist Kartenzahlung sehr verbreitet. Ohne Fremdwährungsgebühr sparst du bei Australien-Dollar-Zahlungen sofort Mehrkosten.',
+  intro: 'In Australien ist Kartenzahlung Standard, aber manche Haendler berechnen Surcharges auf Kartenzahlungen. Dazu kommen Kosten, wenn deine Karte Fremdwaehrungsgebuehren erhebt. DKB Visa ist als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr nutzbar.',
   topRecommendation: {
     name: 'DKB Visa',
     pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Australien breit akzeptiert', 'Starke Option für Bezahlen und Abheben'],
@@ -48,16 +48,16 @@ const pageData: SEOPageData = {
   ],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett, aber mit DKB Visa kannst du als Aktivkunde die Fremdwährungsgebühr sparen. Zahlungen in AUD sind dann deutlich günstiger.',
+      question: 'Welche Kreditkarte fuer Australien ohne Fremdwaehrungsgebuehr?',
+      answer: 'Fuer Australien ist eine Karte ohne Fremdwaehrungsgebuehr wichtig. DKB Visa ist dafuer als Aktivkunde besonders interessant.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Australien ist DKB Visa die beste Wahl als Aktivkunde. Amex Gold ist nur sinnvoll, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'Was sind Kartensurcharges in Australien?',
+      answer: 'Einige Haendler schlagen bei Kartenzahlung einen prozentualen Aufpreis auf. Das ist der hauptsaechliche lokale Schmerzpunkt neben Fremdwaehrungsgebuehren.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, ATM-Gebühren fallen oft an. Spare die Fremdwährungsgebühr, aber plane 3-5 AUD für die Automatengebühr ein.',
+      question: 'Soll ich in Australien in Euro oder AUD bezahlen?',
+      answer: 'Immer in AUD abrechnen lassen. EUR-Abrechnung ist meist teurer und verschlechtert den Wechselkurs.',
     },
     {
       question: 'Sollte ich in Euro oder AUD zahlen?',

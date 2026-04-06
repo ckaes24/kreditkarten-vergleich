@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Japan ohne Gebühren',
-  intro: 'Japan akzeptiert viele Karten, aber Bargeld bleibt wichtig. Eine Kreditkarte ohne Fremdwährungsgebühren hält deine Kosten bei Zahlungen in Yen niedrig.',
+  intro: 'Japan ist kartentauglicher geworden, aber viele kleine Restaurants, Tempel und regionale Anbieter arbeiten weiterhin bargeldlastig. Der typische Fehler sind haeufige Kleinabhebungen plus Gebuehrenkarte. DKB Visa bleibt stark, weil als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit keine Fremdwaehrungsgebuehr anfaellt.',
   topRecommendation: {
     name: 'DKB Visa',
     pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Japan weit akzeptiert', 'Kombiniert Bezahlen und Abheben'],
@@ -48,16 +48,16 @@ const pageData: SEOPageData = {
   ],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa kannst du als Aktivkunde die Fremdwährungsgebühren sparen, aber die Karte muss zuerst akzeptiert werden.',
+      question: 'Welche Kreditkarte fuer Japan ohne Fremdwaehrungsgebuehr?',
+      answer: 'In Japan lohnt eine Karte ohne Fremdwaehrungsgebuehr besonders bei laengeren Aufenthalten. DKB Visa ist hier als Aktivkunde weltweit ohne Fremdwaehrungsgebuehr nutzbar.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Wenn du viel in Japan zahlst, nimm DKB Visa als Aktivkunde. Amex Gold ist nur sinnvoll, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'Brauche ich in Japan trotzdem Bargeld trotz Kreditkarte?',
+      answer: 'Ja, fuer kleinere Geschaefte und laendliche Regionen ist Bargeld weiterhin wichtig. Karte plus Bargeldreserve ist in Japan die sicherste Praxis.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen lokale Gebühren. Spare die Fremdwährungsgebühr, aber rechne mit ATM-Gebühren von 200-300 Yen.',
+      question: 'Soll ich in Japan in Euro oder Yen abrechnen?',
+      answer: 'Immer in Yen abrechnen. Die EUR-Umrechnung ist in der Regel schlechter und verteuert jede Zahlung.',
     },
     {
       question: 'Sollte ich in Euro oder Yen zahlen?',

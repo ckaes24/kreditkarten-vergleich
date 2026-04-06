@@ -25,25 +25,25 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Südafrika ohne Gebühren',
-  intro: 'Südafrika nutzt Karten häufig, aber du musst auf Gebühren achten. Eine Karte ohne Fremdwährungsgebühr reduziert Kosten bei Rand-Zahlungen.',
+  intro: 'In Suedafrika ist Kartenzahlung weit verbreitet, aber ATM-Aufschlaege und unguenstige Umrechnung koennen dein Budget schnell belasten. DKB Visa ist besonders attraktiv, weil als Aktivkunde mit mindestens 700 EUR Geldeingang pro Monat weltweit keine Fremdwaehrungsgebuehr anfaellt.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber nicht lokale ATM-Gebühren.',
+      question: 'Welche Kreditkarte fuer Suedafrika ohne Fremdwaehrungsgebuehr?',
+      answer: 'Fuer Suedafrika ist eine Karte ohne Fremdwaehrungsgebuehr entscheidend. DKB Visa bietet das weltweit fuer Aktivkunden (mind. 700 EUR Geldeingang/Monat).',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Südafrika ist DKB Visa als Aktivkunde die beste Wahl. Amex Gold ist nur sinnvoll, wenn sie akzeptiert wird.',
+      question: 'Wie hoch sind ATM-Gebuehren in Suedafrika?',
+      answer: 'Je nach Bank koennen fixe Gebuehren pro Abhebung anfallen. Darum lieber seltener und in groesseren Betraegen abheben.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen Gebühren. Spare die Fremdwährungsgebühr, aber plane 20-40 ZAR pro Abhebung ein.',
+      question: 'Soll ich in Suedafrika in Euro oder Rand zahlen?',
+      answer: 'Immer in Rand zahlen. Die Euro-Abrechnung ist fast immer teurer und bringt schlechtere Wechselkurse.',
     },
     {
-      question: 'Sollte ich in Euro oder Rand zahlen?',
-      answer: 'Immer in Rand zahlen. Euro-Abrechnung hat schlechtere Wechselkurse und ist oft teurer.',
+      question: 'Ist eine zweite Kreditkarte fuer Suedafrika sinnvoll?',
+      answer: 'Ja, eine Backup-Karte ist auf Fernreisen sinnvoll, falls ein Terminal deine Hauptkarte ablehnt oder ein Sicherheitslimit greift.',
     },
   ],
   relatedPages: [

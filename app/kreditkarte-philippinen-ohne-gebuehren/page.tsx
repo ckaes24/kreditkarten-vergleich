@@ -25,25 +25,25 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Philippinen ohne Gebühren',
-  intro: 'Auf den Philippinen brauchst du oft Bargeld und musst Gebühren im Auge behalten. Eine Karte ohne Fremdwährungsgebühr reduziert die Kosten bei Zahlungen in Pesos.',
+  intro: 'Auf den Philippinen brauchst du ausserhalb grosser Staedte haeufig Bargeld. Die typischen Kostenfallen sind lokale ATM-Gebuehren und teure EUR-Abrechnung am Terminal. Mit DKB Visa sparst du als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit die Fremdwaehrungsgebuehr.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber nicht die lokalen ATM-Gebühren.',
+      question: 'Welche Kreditkarte fuer die Philippinen ohne Fremdwaehrungsgebuehr?',
+      answer: 'Fuer die Philippinen ist eine Karte ohne Fremdwaehrungsgebuehr besonders wichtig. DKB Visa ist als Aktivkunde weltweit ohne Fremdwaehrungsgebuehr nutzbar.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für die Philippinen ist DKB Visa als Aktivkunde die beste Wahl. Amex Gold ist nur sinnvoll, wenn du sicher bist, dass sie akzeptiert wird.',
+      question: 'Wie hoch sind ATM-Gebuehren auf den Philippinen?',
+      answer: 'Viele Automaten berechnen fixe Zusatzkosten pro Abhebung. Hebe deshalb lieber weniger oft, dafuer in sinnvoll gebuendelten Betraegen ab.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen Gebühren. Spare die Fremdwährungsgebühr, aber plane 150-250 PHP pro Abhebung ein.',
+      question: 'Soll ich auf den Philippinen in Euro oder Pesos zahlen?',
+      answer: 'Immer in Pesos zahlen. Die EUR-Abrechnung ist fast immer schlechter und erhoeht die Gesamtkosten.',
     },
     {
-      question: 'Sollte ich in Euro oder Pesos zahlen?',
-      answer: 'Immer in Pesos zahlen. Euro-Abrechnung hat schlechtere Wechselkurse und ist oft teurer.',
+      question: 'Reicht eine einzige Kreditkarte fuer die Philippinen?',
+      answer: 'Eine zweite Karte als Backup ist sinnvoll, falls Akzeptanzprobleme, Limits oder Sicherheitssperren auftreten.',
     },
   ],
   relatedPages: [

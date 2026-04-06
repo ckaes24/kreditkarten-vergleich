@@ -25,25 +25,25 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Mexiko ohne Gebühren',
-  intro: 'In Mexiko ist die Lage gemischt: große Hotels akzeptieren Karten, lokale Märkte verlangen Bargeld. Eine Karte ohne Fremdwährungsgebühr spart vor allem bei Zahlungen in Pesos.',
+  intro: 'In Mexiko akzeptieren Hotels und Ketten meist Karten, kleinere Anbieter und Transport oft nur Bargeld. Der groesste Kostenfehler: viele kleine ATM-Abhebungen plus EUR-Abrechnung am Terminal. Mit DKB Visa zahlst du als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr und senkst die laufenden Reisekosten deutlich.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht vollständig. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber nicht lokale ATM-Gebühren.',
+      question: 'Welche Kreditkarte fuer Mexiko ohne Fremdwaehrungsgebuehr?',
+      answer: 'Eine Karte ohne Fremdwaehrungsgebuehr ist in Mexiko Pflicht. DKB Visa ist als Aktivkunde weltweit ohne Fremdwaehrungsgebuehr nutzbar. Ohne Aktivstatus fallen 1,75% an.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Mexiko ist DKB Visa als Aktivkunde die beste Wahl für Karten und Geldabhebungen.',
+      question: 'Wie vermeide ich hohe ATM-Gebuehren in Mexiko?',
+      answer: 'Heb nicht dauernd kleine Betraege ab. Buendel Abhebungen und vergleiche Automatenstandorte, da lokale Gebuehren je nach Bank stark schwanken koennen.',
     },
     {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele mexikanische ATMs verlangen Gebühren. Spare die Fremdwährungsgebühr, aber plane 40-60 Pesos ein.',
+      question: 'Soll ich in Mexiko in Euro oder Pesos bezahlen?',
+      answer: 'Immer in Pesos zahlen. Die EUR-Abrechnung (DCC) ist fast immer teurer und verschlechtert den Wechselkurs.',
     },
     {
-      question: 'Sollte ich in Euro oder Pesos zahlen?',
-      answer: 'Immer in Pesos zahlen. Euro-Abrechnung nutzt schlechte Wechselkurse und ist oft teurer.',
+      question: 'Brauche ich in Mexiko Bargeld trotz Kreditkarte?',
+      answer: 'Ja, besonders ausserhalb grosser Staedte. Nutze Karte wo moeglich und halte einen sinnvollen Bargeldpuffer fuer Maerkte, Taxis und kleine Anbieter bereit.',
     },
   ],
   relatedPages: [
