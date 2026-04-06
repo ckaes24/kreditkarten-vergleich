@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
-import { SEOCreditCard } from '../../data/seoCreditCards';
+import { SEOCreditCard, seoCreditCards } from '../../data/seoCreditCards';
 
 interface FAQItem {
   question: string;
@@ -26,26 +26,8 @@ interface SEOPageData {
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Bali ohne Gebühren',
   intro: 'Auf Bali brauchst du oft Bargeld und zahlst ATM-Gebühren. Eine Karte ohne Fremdwährungsgebühren reduziert die Kosten bei jeder Zahlung in Rupiah.',
-  topRecommendation: {
-    name: 'DKB Visa',
-    pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa-Akzeptanz an vielen touristischen Orten', 'Gute Kombination aus Bezahlen und Notfall-Abheben'],
-    cons: ['1,75% Fremdwährungsgebühr ohne Aktivstatus', '400€ Tageslimit für Abhebungen'],
-    affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
-  },
-  alternatives: [
-    {
-      name: 'American Express Gold',
-      pros: ['0% Fremdwährungsgebühren', 'Reiseversicherung inklusive', 'Bonusprogramm bei Auslandsausgaben'],
-      cons: ['144€ Jahresgebühr', 'Nicht überall auf Bali akzeptiert', 'Bonitätsprüfung erforderlich'],
-      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C14013149B',
-    },
-    {
-      name: 'TF Bank Mastercard',
-      pros: ['0€ Jahresgebühr', 'Einfache Beantragung', 'Backup für Notfälle'],
-      cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine echte 0%-Lösung'],
-      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
-    },
-  ],
+  topRecommendation: seoCreditCards['dkb-visa'],
+  alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
       question: 'Kann ich dort kostenlos bezahlen?',
