@@ -90,8 +90,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return <>
     <SEOPageTemplate {...pageData} />
-    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
-      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
-    </div>
+      <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+        Tipp: In den USA können ATM- und Fremdwährungsgebühren je nach Anbieter stark variieren. Ein aktueller Kreditkartenvergleich hilft, unnötige Kosten zu vermeiden und die beste Karte für deine Reise zu finden.
+      </div>
   </>;
 }

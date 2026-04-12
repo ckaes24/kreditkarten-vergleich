@@ -87,8 +87,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return <>
     <SEOPageTemplate {...pageData} />
-    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
-      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
-    </div>
+      <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+        Tipp: In Kanada unterscheiden sich die Gebühren und Akzeptanzstellen je nach Bank und Karte. Prüfe vor der Reise aktuelle Konditionen und vergleiche Karten gezielt für längere Aufenthalte oder Roadtrips.
+      </div>
   </>;
 }
