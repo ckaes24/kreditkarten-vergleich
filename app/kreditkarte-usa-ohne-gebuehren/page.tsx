@@ -26,7 +26,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte USA ohne Gebühren',
-  intro: 'Beste Kreditkarte für die USA 2026: So vermeidest du Gebühren. In den USA lauern viele Kostenfallen: Fremdwährungsgebühren (1,75–3 %), ATM-Gebühren (3–8 $ pro Abhebung), ungünstige Wechselkurse und DCC (immer in USD zahlen!). Die DKB Visa¹ funktioniert an fast allen US-Terminals.',
+  intro: 'Beste Kreditkarte für die USA 2026: So vermeidest du Gebühren. In den USA lauern viele Kostenfallen: Fremdwährungsgebühren (1,75–3 %), ATM-Gebühren (3–8 $ pro Abhebung), ungünstige Wechselkurse und DCC (immer in USD zahlen!). Mit der richtigen Karte kannst du diese Gebühren vermeiden und flexibel bezahlen.',
   topRecommendation: {
     name: 'Advanzia Gebührenfrei Mastercard',
     pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
@@ -35,13 +35,6 @@ const pageData: SEOPageData = {
     imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
   },
   alternatives: [
-    {
-      name: 'DKB Visa Debit',
-      pros: ['Keine Jahresgebühr', 'Gute Akzeptanz in den USA', 'Kostenlose Bargeldabhebungen als Aktivkunde¹'],
-      cons: ['Nur Debit, keine echte Credit Card', '1,75% Fremdwährungsgebühr ohne Aktivstatus'],
-      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
-      imageUrl: 'https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png',
-    },
     seoCreditCards['amex-gold'],
     {
       name: 'TF Bank Mastercard',
@@ -54,7 +47,7 @@ const pageData: SEOPageData = {
   faq: [
     {
       question: 'Welche Kreditkarte für die USA ist wirklich geeignet?',
-      answer: 'Für Hotels, Mietwagen und Kautionen wird in den USA fast immer eine echte Credit Card (z.B. Advanzia) verlangt. Für den Alltag reicht meist auch eine Debitkarte wie DKB Visa, aber als Backup ist eine echte Credit Card ratsam.',
+      answer: 'Für Hotels, Mietwagen und Kautionen wird in den USA fast immer eine echte Kreditkarte verlangt. Für den Alltag reicht meist auch eine Debitkarte, aber als Backup ist eine echte Kreditkarte ratsam.',
     },
     {
       question: 'Warum kosten Abhebungen in den USA so viel?',

@@ -26,16 +26,13 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Mexiko ohne Gebühren',
-  intro: 'Beste Kreditkarte für Mexiko 2026: So vermeidest du Gebühren. In Mexiko akzeptieren Hotels und Ketten meist Karten, aber kleine Anbieter und Transport oft nur Bargeld. Die größten Kostenfallen: viele kleine ATM-Abhebungen, EUR-Abrechnung am Terminal (DCC) und Fremdwährungsgebühren. Die DKB Visa¹ senkt die laufenden Reisekosten deutlich.',
-  topRecommendation: {
-    ...seoCreditCards['dkb-visa'],
-    pros: seoCreditCards['dkb-visa'].pros.map(p => p.includes('Aktivkunde') ? p.replace('Aktivkunde', 'Aktivkunde¹') : p),
-  },
+  intro: 'Beste Kreditkarte für Mexiko 2026: So vermeidest du Gebühren. In Mexiko akzeptieren Hotels und Ketten meist Karten, aber kleine Anbieter und Transport oft nur Bargeld. Die größten Kostenfallen: viele kleine ATM-Abhebungen, EUR-Abrechnung am Terminal (DCC) und Fremdwährungsgebühren. Mit der passenden Karte lassen sich die laufenden Reisekosten deutlich senken.',
+  topRecommendation: seoCreditCards['tf-bank-mastercard'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
       question: 'Welche Kreditkarte für Mexiko ohne Fremdwährungsgebühr?',
-      answer: 'Eine Karte ohne Fremdwährungsgebühr ist in Mexiko Pflicht. Die DKB Visa ist als Aktivkunde weltweit OHNE Fremdwährungsgebühr nutzbar. Ohne Aktivstatus fallen 1,75 % an.',
+      answer: 'Eine Karte ohne Fremdwährungsgebühr ist in Mexiko Pflicht. Achte auf geringe Gebühren und eine hohe Akzeptanz vor Ort.',
     },
     {
       question: 'Wie vermeide ich hohe ATM-Gebühren in Mexiko?',

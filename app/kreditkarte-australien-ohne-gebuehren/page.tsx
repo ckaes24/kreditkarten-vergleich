@@ -26,7 +26,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Australien ohne Gebühren',
-  intro: 'Beste Kreditkarte für Australien 2026: So vermeidest du Gebühren. In Australien ist Kartenzahlung Standard, aber viele Händler berechnen Surcharges (1–3 %) auf Kartenzahlungen. Die größten Kostenfallen: Surcharges, viele kleine ATM-Abhebungen, EUR-Abrechnung am Terminal (DCC) und Fremdwährungsgebühren. Die DKB Visa¹ funktioniert an fast allen australischen Terminals.',
+  intro: 'Beste Kreditkarte für Australien 2026: So vermeidest du Gebühren. In Australien ist Kartenzahlung Standard, aber viele Händler berechnen Surcharges (1–3 %) auf Kartenzahlungen. Die größten Kostenfallen: Surcharges, viele kleine ATM-Abhebungen, EUR-Abrechnung am Terminal (DCC) und Fremdwährungsgebühren. Mit der richtigen Karte kannst du diese Gebühren vermeiden und flexibel bezahlen.',
   topRecommendation: {
     name: 'Advanzia Gebührenfrei Mastercard',
     pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
@@ -35,13 +35,6 @@ const pageData: SEOPageData = {
     imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
   },
   alternatives: [
-    {
-      name: 'DKB Visa Debit',
-      pros: ['Keine Jahresgebühr', 'Gute Akzeptanz in Australien', 'Kostenlose Bargeldabhebungen als Aktivkunde¹'],
-      cons: ['Nur Debit, keine echte Credit Card', '1,75% Fremdwährungsgebühr ohne Aktivstatus'],
-      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
-      imageUrl: 'https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png',
-    },
     {
       name: 'TF Bank Mastercard',
       pros: ['0€ Jahresgebühr', 'Einfache Beantragung', 'Backup für Notfälle'],
@@ -53,7 +46,7 @@ const pageData: SEOPageData = {
   faq: [
     {
       question: 'Welche Kreditkarte für Australien ohne Fremdwährungsgebühr?',
-      answer: 'Für Hotels, Mietwagen und Kautionen wird in Australien oft eine echte Credit Card (z.B. Advanzia) verlangt. Für den Alltag reicht meist auch eine Debitkarte wie DKB Visa, aber als Backup ist eine echte Credit Card ratsam.',
+      answer: 'Für Hotels, Mietwagen und Kautionen wird in Australien oft eine echte Kreditkarte verlangt. Für den Alltag reicht meist auch eine Debitkarte, aber als Backup ist eine echte Kreditkarte ratsam.',
     },
     {
       question: 'Was sind Kartensurcharges in Australien?',

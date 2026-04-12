@@ -26,16 +26,13 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Bali ohne Gebühren',
-  intro: 'Beste Kreditkarte für Bali 2026: So vermeidest du Gebühren. Auf Bali entstehen die größten Kosten durch lokale ATM-Gebühren, Fremdwährungsgebühren und schlechte EUR-Umrechnung am Terminal (DCC). Die DKB Visa¹ funktioniert an fast allen indonesischen Terminals.',
-  topRecommendation: {
-    ...seoCreditCards['dkb-visa'],
-    pros: seoCreditCards['dkb-visa'].pros.map(p => p.includes('Aktivkunde') ? p.replace('Aktivkunde', 'Aktivkunde¹') : p),
-  },
+  intro: 'Beste Kreditkarte für Bali 2026: So vermeidest du Gebühren. Auf Bali entstehen die größten Kosten durch lokale ATM-Gebühren, Fremdwährungsgebühren und schlechte EUR-Umrechnung am Terminal (DCC). Mit der passenden Karte kannst du diese Gebühren vermeiden und flexibel bezahlen.',
+  topRecommendation: seoCreditCards['tf-bank-mastercard'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
       question: 'Welche Kreditkarte für Bali ohne Fremdwährungsgebühr?',
-      answer: 'Für Bali ist eine Karte ohne Fremdwährungsgebühr zentral. Die DKB Visa ist als Aktivkunde weltweit OHNE Fremdwährungsgebühr nutzbar. Ohne Aktivstatus fallen 1,75 % an.',
+      answer: 'Für Bali ist eine Karte ohne Fremdwährungsgebühr zentral. Achte auf geringe Gebühren und eine hohe Akzeptanz vor Ort.',
     },
     {
       question: 'Wie hoch sind ATM-Gebühren auf Bali?',
