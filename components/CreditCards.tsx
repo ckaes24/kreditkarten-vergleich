@@ -238,7 +238,7 @@ export default function CreditCards() {
               target="_blank"
               className="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm"
             >
-              Jetzt beantragen
+              Jetzt beantragen*
             </a>
           </div>
         ))}
@@ -280,7 +280,7 @@ export default function CreditCards() {
                     target="_blank"
                     className="text-blue-700 underline font-medium"
                   >
-                    Beantragen
+                    Beantragen*
                   </a>
                 </td>
               </tr>
