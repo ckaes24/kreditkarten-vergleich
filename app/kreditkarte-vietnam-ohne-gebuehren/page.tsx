@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { SEOCreditCard, seoCreditCards } from '../../data/seoCreditCards';
 
 interface FAQItem {
@@ -25,25 +26,28 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Vietnam ohne Gebühren',
-  intro: 'In Vietnam ist viel Bargeld nötig und ATM-Gebühren kommen schnell dazu. Eine Karte ohne Fremdwährungsgebühr hält die Kosten bei Vietnamesischem Dong niedrig.',
-  topRecommendation: seoCreditCards['dkb-visa'],
+  intro: 'Beste Kreditkarte für Vietnam 2026: In Vietnam ist Bargeld für viele Ausgaben nötig, aber Kartenzahlung wird immer beliebter. Achte auf eine Karte ohne Fremdwährungsgebühr und mit günstigen Konditionen für Abhebungen. So sparst du bei jeder Zahlung und bist flexibel unterwegs.',
+  topRecommendation: {
+    ...seoCreditCards['dkb-visa'],
+    pros: seoCreditCards['dkb-visa'].pros.map(p => p.includes('Aktivkunde') ? p.replace('Aktivkunde', 'Aktivkunde¹') : p),
+  },
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber lokale ATM-Gebühren bleiben.',
+      question: 'Kann ich in Vietnam kostenlos bezahlen?',
+      answer: 'Mit der DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr. Beachte aber, dass viele ATMs lokale Gebühren verlangen (30.000–60.000 Dong pro Abhebung).',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Vietnam ist DKB Visa die beste Wahl für Zahlungen und Bargeld. Amex Gold ist nur sinnvoll, wenn sie akzeptiert wird.',
-    },
-    {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, viele ATMs verlangen lokale Gebühren. Spare die Fremdwährungsgebühr, aber plane 30.000-60.000 Dong ein.',
+      question: 'Welche Kreditkarte ist in Vietnam am besten?',
+      answer: 'Die DKB Visa ist als Aktivkunde weltweit OHNE Fremdwährungsgebühr und wird in Vietnam breit akzeptiert.',
     },
     {
       question: 'Sollte ich in Euro oder Dong zahlen?',
-      answer: 'Immer in Dong zahlen. Euro-Abrechnung hat schlechtere Kurse und ist oft viel teurer.',
+      answer: 'Immer in Dong zahlen! Die Euro-Abrechnung (DCC) ist fast immer teurer und verschlechtert den Wechselkurs.',
+    },
+    {
+      question: 'Brauche ich in Vietnam Bargeld trotz Kreditkarte?',
+      answer: 'Ja, für kleine Händler, Märkte und Taxis. Nutze Karte wo möglich, aber halte einen kleinen Bargeldpuffer bereit.',
     },
   ],
   relatedPages: [
@@ -51,9 +55,11 @@ const pageData: SEOPageData = {
     { title: 'Kreditkarte Philippinen ohne Gebühren', url: '/kreditkarte-philippinen-ohne-gebuehren' },
     { title: 'Kreditkarte ohne Fremdwährungsgebühr Vergleich', url: '/kreditkarte-ohne-fremdwaehrungsgebuehr-vergleich' },
   ],
-  title: 'Kreditkarte Vietnam ohne Gebühren | Beste Karten für Dong',
-  description: 'Vergleich der besten Kreditkarten ohne Fremdwährungsgebühr für Vietnam. Spare bei Zahlungen und Abhebungen in Dong.',
+  title: 'Beste Kreditkarte für Vietnam 2026: Gebührenfrei bezahlen & abheben',
+  description: 'Beste Kreditkarte für Vietnam 2026: Gebührenfrei bezahlen & abheben. Mit klaren Tipps zu ATM-Gebühren und Landeswährung.',
 };
+
+
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -61,5 +67,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
+    </div>
+  </>;
 }

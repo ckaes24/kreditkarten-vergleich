@@ -1,3 +1,4 @@
+
 "use client";
 
 import CreditCards from './CreditCards';
@@ -24,20 +25,65 @@ interface SEOPageProps {
   description: string;
 }
 
-const CardSVG = ({ name }: { name: string }) => (
-  <svg className="w-full h-full" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#1e40af" />
-        <stop offset="100%" stopColor="#1e3a8a" />
-      </linearGradient>
-    </defs>
-    <rect width="300" height="180" rx="12" fill="url(#cardGrad)" />
-    <text x="20" y="50" fontSize="20" fontWeight="bold" fill="white">{name}</text>
-    <circle cx="260" cy="140" r="30" fill="white" opacity="0.2" />
-    <circle cx="270" cy="150" r="20" fill="white" opacity="0.3" />
-  </svg>
-);
+const fixedCardLogos: Record<string, string> = {
+  "DKB Visa": "https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png",
+  "TF Bank Mastercard": "http://www.fndsda.net/b/tfbank/TFBank_MastercardGold_NeuesKartendesign_01.png",
+  "Santander BestCard": "https://www.santander.de/static/img/bestcard_basic_170x135.gif",
+  "C24 Mastercard": "https://www.c24.de/assets/images/webp/mastercard/mastercard-header.webp",
+  "Gebuehrenfrei Mastercard": "https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp",
+  "Gebührenfrei Mastercard": "https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp",
+  "American Express Gold": "https://banner.bluesummit.de/American%20Express/DE/gold/gold_yellow/300x190.png",
+  "American Express Platinum": "https://banner.bluesummit.de/American%20Express/DE/platin/300x190.png",
+  "N26 Mastercard (Empfehlung)": "https://images.ctfassets.net/q33z48p65a6w/6mRcFZaMyr1Kg8MUkGQkLo/e149ce5908cd6a8e2cdf3976b4226244/2310_Web-asset_Mastercard.png",
+};
+
+function getCardLogo(card: SEOCreditCard): string | undefined {
+  return fixedCardLogos[card.name] || card.imageUrl;
+}
+
+function getCountryName(keyword: string): string {
+  const raw = keyword
+    .replace(/^kreditkarte\s*/i, "")
+    .replace(/^beste\s*kreditkarte\s*/i, "")
+    .replace(/ohne\s*geb(ue|ü)hren/gi, "")
+    .replace(/abheben\s*kostenlos/gi, "")
+    .replace(/ohne\s*fremdw(ae|ä)hrungsgeb(ue|ü)hr/gi, "")
+    .replace(/reisen?\s*deutsche/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return raw.length > 0 ? raw : keyword;
+}
+
+function getBadgeText(keyword: string): string | null {
+  const k = keyword.toLowerCase();
+  if (k.includes("usa") || k.includes("kanada") || k.includes("dubai")) {
+    return "Empfehlung fuer Mietwagen (True Credit)";
+  }
+  if (k.includes("thailand") || k.includes("bali") || k.includes("vietnam") || k.includes("mexiko")) {
+    return "Top fuer Bargeld am ATM";
+  }
+  if (k.includes("japan") || k.includes("norwegen") || k.includes("island")) {
+    return "Favorit fuer kontaktloses Zahlen";
+  }
+  return null;
+}
+
+function getLocalInsight(keyword: string): string {
+  const k = keyword.toLowerCase();
+  if (k.includes("usa") || k.includes("dubai")) {
+    return "Mietwagen-Kautionen werden haeufig nur mit echter Credit Card akzeptiert. Debitkarten werden am Schalter oft abgelehnt. Fuer Reisen mit Mietwagen immer eine zusaetzliche True-Credit-Karte als Backup einplanen.";
+  }
+  if (k.includes("thailand") || k.includes("bali") || k.includes("vietnam")) {
+    return "Achte auf fixe ATM-Gebuehren (z. B. 220 Baht in Thailand). Hebe seltener und in groesseren Betraegen ab. Am Terminal und ATM immer die Landeswaehrung waehlen, nie EUR-Abrechnung.";
+  }
+  if (k.includes("island") || k.includes("norwegen")) {
+    return "In Island und Norwegen ist Bargeld fast ausgestorben. Du brauchst eine Karte mit 0 Prozent Fremdwaehrungsgebuehr fuer praktisch alle Zahlungen im Alltag.";
+  }
+  if (k.includes("mexiko")) {
+    return "In Mexiko ist DCC am ATM eine haeufige Abzocke. Lehne die Umrechnung in EUR immer ab und lass in Landeswaehrung abrechnen, sonst zahlst du oft einen deutlich schlechteren Kurs.";
+  }
+  return "Vermeide DCC (Abrechnung in EUR), zahle in Landeswaehrung und achte auf lokale ATM-Aufschlaege. So senkst du die realen Reisekosten spuerbar.";
+}
 
 export default function SEOPageTemplate({
   keyword,
@@ -48,37 +94,9 @@ export default function SEOPageTemplate({
   relatedPages,
 }: SEOPageProps) {
   const allCards = [topRecommendation, ...alternatives];
-  const lowerKeyword = keyword.toLowerCase();
-  const isUsaPage = lowerKeyword.includes('usa');
-  const painpoints: Record<string, string> = {
-    usa: 'In den USA verlangen viele Mietwagenfirmen für die Kaution eine echte Kreditkarte (Credit). Debitkarten werden am Schalter oft abgelehnt, obwohl Zahlungen im Alltag funktionieren. Für Mietwagen immer eine echte, kostenlose Credit-Karte wie TF Bank oder Advanzia als Backup nutzen.',
-    thailand: 'In Thailand verlangen alle Banken ATM-Gebühren (meist 220 Baht pro Abhebung). Diese lassen sich nicht vermeiden, aber du kannst sparen, indem du seltener und in größeren Beträgen abhebst. Immer in Baht abrechnen lassen, nie in Euro!',
-    vietnam: 'In Vietnam sind Bargeld und Karten parallel wichtig. Viele ATMs verlangen Gebühren (meist 40.000 VND). Achte auf Automaten mit niedrigen Gebühren und hebe größere Beträge ab. Immer in Dong abrechnen lassen.',
-    singapur: 'In Singapur ist Kartenzahlung Standard, aber manche Händler verlangen Surcharges (1-3%). Achte auf Hinweise am Terminal und zahle, wenn möglich, kontaktlos. Immer in SGD abrechnen lassen.',
-    australien: 'Australische Banken verlangen oft Surcharges bei Kartenzahlung (bis 2%). ATM-Gebühren variieren stark. Hebe an Bankautomaten ab und zahle größere Beträge auf einmal.',
-    suedafrika: 'In Südafrika verlangen viele ATMs Gebühren (20-40 ZAR). Nutze Bankautomaten in sicheren Gegenden und hebe größere Beträge ab. Immer in Rand abrechnen lassen.',
-    mexiko: 'Mexikanische ATMs verlangen oft 40-60 Pesos pro Abhebung. Hebe seltener ab und vergleiche Automaten. Immer in Pesos abrechnen lassen.',
-    japan: 'In Japan funktionieren Karten an 7-Eleven- und Post-ATMs am zuverlässigsten. Viele kleine Läden akzeptieren nur Bargeld. Immer in Yen abrechnen lassen.',
-    dubai: 'In Dubai ist Kartenzahlung weit verbreitet, aber Dynamic Currency Conversion (Abrechnung in EUR) ist teuer. Immer in AED abrechnen lassen und auf Surcharges achten.',
-    bali: 'Auf Bali verlangen ATMs oft hohe Gebühren (bis 220.000 Rupiah). Hebe größere Beträge ab und zahle, wo möglich, mit Karte. Immer in Rupiah abrechnen lassen.',
-    kanada: 'Kanadische ATMs verlangen oft 3-5 CAD pro Abhebung. Hebe größere Beträge ab und zahle, wo möglich, kontaktlos. Immer in CAD abrechnen lassen.',
-    philippinen: 'Auf den Philippinen verlangen ATMs meist 150-250 PHP pro Abhebung. Hebe größere Beträge ab und zahle, wo möglich, mit Karte. Immer in Pesos abrechnen lassen.',
-  };
-  function getPainpointText() {
-    if (isUsaPage) return painpoints.usa;
-    if (lowerKeyword.includes('thailand')) return painpoints.thailand;
-    if (lowerKeyword.includes('vietnam')) return painpoints.vietnam;
-    if (lowerKeyword.includes('singapur')) return painpoints.singapur;
-    if (lowerKeyword.includes('australien')) return painpoints.australien;
-    if (lowerKeyword.includes('südafrika') || lowerKeyword.includes('suedafrika')) return painpoints.suedafrika;
-    if (lowerKeyword.includes('mexiko')) return painpoints.mexiko;
-    if (lowerKeyword.includes('japan')) return painpoints.japan;
-    if (lowerKeyword.includes('dubai')) return painpoints.dubai;
-    if (lowerKeyword.includes('bali')) return painpoints.bali;
-    if (lowerKeyword.includes('kanada')) return painpoints.kanada;
-    if (lowerKeyword.includes('philippinen')) return painpoints.philippinen;
-    return 'Der größte Kostenhebel auf Reisen sind nicht nur Fremdwährungsgebühren, sondern lokale ATM-Aufschläge und Dynamic Currency Conversion (Abrechnung in EUR). Hebe seltener, dafür in größeren Beträgen ab und wähle am Terminal immer die Landeswährung statt EUR.';
-  }
+  const isUsaPage = keyword.toLowerCase().includes('usa');
+  const country = getCountryName(keyword);
+  const badge = getBadgeText(keyword);
   const effectiveFaq = faq.length > 0 ? faq : [
     {
       question: `Welche Kreditkarte fuer ${keyword} ohne Fremdwaehrungsgebuehr?`,
@@ -99,29 +117,29 @@ export default function SEOPageTemplate({
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 text-blue-900 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48"></div>
         </div>
         <div className="relative container mx-auto px-4 lg:px-6 py-24 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-              Die beste Kreditkarte für<br /><span className="text-blue-200">{keyword}</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+              Beste Kreditkarte fuer <span className="text-amber-300">{country}</span> 2026: Gebuehrenfrei bezahlen & abheben
             </h1>
-            <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12 text-blue-900 font-light">
+            <p className="text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto mb-12 text-slate-100 font-normal">
               {intro}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#top-card"
-                className="inline-block bg-white text-blue-700 font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition duration-300 text-lg"
+                className="inline-block bg-white text-slate-900 font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition duration-300 text-lg"
               >
                 🏆 Top-Empfehlung
               </a>
               <a
                 href="#comparison"
-                className="inline-block bg-blue-500 text-white font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition duration-300 text-lg border-2 border-white"
+                className="inline-block bg-amber-500 text-slate-900 font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition duration-300 text-lg border-2 border-amber-400"
               >
                 📊 Vergleich
               </a>
@@ -133,12 +151,12 @@ export default function SEOPageTemplate({
       <div className="container mx-auto px-4 lg:px-6 py-20 max-w-7xl">
         {/* Insider-Schmerzpunkt */}
         <section className="mb-16">
-          <div className="bg-gradient-to-r from-slate-50 to-blue-50 border border-blue-100 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-slate-50 to-amber-50 border border-amber-200 rounded-2xl p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Insider-Tipp: Die häufigste Gebührenfalle vor Ort
             </h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              {getPainpointText()}
+              {getLocalInsight(keyword)}
             </p>
           </div>
         </section>
@@ -159,8 +177,24 @@ export default function SEOPageTemplate({
               {/* Image Section */}
               <div className="lg:w-2/5 bg-gradient-to-br from-blue-50 to-indigo-100 p-12 flex items-center justify-center">
                 <div className="text-center">
+                  {badge ? (
+                    <div className="mb-4">
+                      <span className="inline-block bg-slate-900 text-amber-300 px-4 py-2 rounded-full text-sm font-bold tracking-wide">
+                        {badge}
+                      </span>
+                    </div>
+                  ) : null}
                   <div className="w-80 h-48 bg-white rounded-2xl shadow-xl flex items-center justify-center border border-gray-200">
-                    <CardSVG name={topRecommendation.name} />
+                    {getCardLogo(topRecommendation) ? (
+                      <img
+                        src={getCardLogo(topRecommendation)}
+                        alt={topRecommendation.name}
+                        className="w-full h-full object-contain rounded-xl"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="text-sm text-gray-500">Kein Kartenlogo verfuegbar</div>
+                    )}
                   </div>
                   <div className="mt-6">
                     <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
@@ -180,19 +214,18 @@ export default function SEOPageTemplate({
                       <span className="text-3xl mr-3">✅</span> Top-Vorteile
                     </h4>
                     <ul className="space-y-3">
-                      {topRecommendation.pros.slice(0, 3).map((pro, i) => (
-                        <li key={i} className="text-green-800 font-medium text-lg leading-relaxed">• {pro}</li>
+                      {topRecommendation.pros.slice(0, 4).map((pro, i) => (
+                        <li key={i} className="text-green-900 font-medium text-lg leading-relaxed">✅ {pro}</li>
                       ))}
                     </ul>
                   </div>
-
                   <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border border-red-100">
                     <h4 className="font-bold text-red-800 mb-4 flex items-center text-xl">
                       <span className="text-3xl mr-3">⚠️</span> Zu beachten
                     </h4>
                     <ul className="space-y-3">
                       {topRecommendation.cons.slice(0, 2).map((con, i) => (
-                        <li key={i} className="text-red-800 font-medium text-lg leading-relaxed">• {con}</li>
+                        <li key={i} className="text-red-900 font-medium text-lg leading-relaxed">❌ {con}</li>
                       ))}
                     </ul>
                   </div>
@@ -232,11 +265,11 @@ export default function SEOPageTemplate({
               <div key={i} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300">
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    {card.imageUrl ? (
+                    {getCardLogo(card) ? (
                       <img
-                        src={card.imageUrl}
+                        src={getCardLogo(card)}
                         alt={card.name}
-                        className="w-16 h-10 rounded-lg mr-4 shadow-sm"
+                        className="w-20 h-12 rounded-lg mr-4 shadow-sm object-contain bg-white"
                       />
                     ) : (
                       <div className="w-16 h-10 bg-gray-200 rounded-lg mr-4 flex items-center justify-center">
@@ -249,17 +282,17 @@ export default function SEOPageTemplate({
                   <div className="grid grid-cols-1 gap-4 mb-6">
                     <div>
                       <h4 className="font-semibold text-green-700 mb-2">Vorteile</h4>
-                      <ul className="text-sm text-gray-700 space-y-1">
+                      <ul className="text-sm text-gray-800 space-y-1">
                         {card.pros.slice(0, 2).map((pro, j) => (
-                          <li key={j}>• {pro}</li>
+                          <li key={j}>✅ {pro}</li>
                         ))}
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold text-red-700 mb-2">Nachteile</h4>
-                      <ul className="text-sm text-gray-700 space-y-1">
+                      <ul className="text-sm text-gray-800 space-y-1">
                         {card.cons.slice(0, 1).map((con, j) => (
-                          <li key={j}>• {con}</li>
+                          <li key={j}>❌ {con}</li>
                         ))}
                       </ul>
                     </div>
@@ -293,7 +326,7 @@ export default function SEOPageTemplate({
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-gray-50 to-gray-100">
+                <thead className="bg-slate-100">
                   <tr>
                     <th className="px-6 py-4 text-left font-bold text-gray-900 text-lg">Kreditkarte</th>
                     <th className="px-6 py-4 text-left font-bold text-gray-900 text-lg">Top-Vorteile</th>
@@ -303,14 +336,14 @@ export default function SEOPageTemplate({
                 </thead>
                 <tbody>
                   {allCards.map((card, i) => (
-                    <tr key={i} className="border-t border-gray-200 hover:bg-gray-50">
+                    <tr key={i} className="border-t border-gray-200 hover:bg-slate-50">
                       <td className="px-6 py-4">
                         <div className="flex items-center">
-                          {card.imageUrl ? (
+                          {getCardLogo(card) ? (
                             <img
-                              src={card.imageUrl}
+                              src={getCardLogo(card)}
                               alt={card.name}
-                              className="w-12 h-8 rounded mr-3"
+                              className="w-12 h-8 rounded mr-3 object-contain bg-white"
                             />
                           ) : (
                             <div className="w-12 h-8 bg-gray-200 rounded mr-3"></div>
@@ -319,14 +352,14 @@ export default function SEOPageTemplate({
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <div className="text-sm text-gray-700">
+                        <div className="text-sm text-gray-900">
                           {card.pros.slice(0, 2).map((pro, j) => (
-                            <div key={j} className="mb-1">• {pro}</div>
+                            <div key={j} className="mb-1">✅ {pro}</div>
                           ))}
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <div className="text-sm text-gray-700">
+                        <div className="text-sm text-gray-900 font-medium">
                           {card.cons.find(con => con.includes('Jahresgebühr') || con.includes('€')) || 'Keine Jahresgebühr'}
                         </div>
                       </td>
@@ -407,7 +440,7 @@ export default function SEOPageTemplate({
               >
                 <div className="text-center">
                   <div className="text-4xl mb-3">✈️</div>
-                  <h3 className="font-bold text-blue-600 hover:text-blue-800 text-lg">{page.title}</h3>
+                  <h3 className="font-bold text-slate-900 hover:text-blue-800 text-lg">{page.title}</h3>
                 </div>
               </a>
             ))}

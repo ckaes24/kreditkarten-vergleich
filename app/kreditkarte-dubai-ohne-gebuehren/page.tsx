@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { SEOCreditCard } from '../../data/seoCreditCards';
 
 interface FAQItem {
@@ -25,43 +26,46 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Dubai ohne Gebühren',
-  intro: 'In Dubai funktionieren Karten sehr gut, aber Hotelkautionen und Dynamic Currency Conversion koennen teuer werden. Mit DKB Visa entfaellt als Aktivkunde (mind. 700 EUR Geldeingang/Monat) die Fremdwaehrungsgebuehr weltweit, was besonders bei groesseren Hotel- und Shopping-Umsaetzen hilft.',
+  intro: 'Beste Kreditkarte für Dubai 2026: In Dubai werden Karten fast überall akzeptiert, aber Surcharges, DCC und Hotelkautionen können teuer werden. Mit der richtigen Kreditkarte sparst du Gebühren und bist flexibel bei Zahlungen und Abhebungen.',
   topRecommendation: {
-    name: 'DKB Visa',
-    pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Dubai weit akzeptiert', 'Starke Wahl für Bezahlen und Notfall-Abheben'],
-    cons: ['1,75% Fremdwährungsgebühr ohne Aktivstatus', '400€ Tageslimit für Abhebungen'],
-    affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+    name: 'Advanzia Gebührenfrei Mastercard',
+    pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
+    cons: ['Kein Girokonto, reine Kreditkarte', 'Zins bei Teilzahlung'],
+    affiliateLink: 'https://www.financeads.net/tc.php?t=70334C13814286T',
+    imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
   },
   alternatives: [
     {
-      name: 'American Express Gold',
-      pros: ['0% Fremdwährungsgebühren', 'Reiseversicherung inklusive', 'Bonusprogramm bei Auslandsausgaben'],
-      cons: ['144€ Jahresgebühr', 'Nicht überall in Dubai akzeptiert', 'Bonitätsprüfung erforderlich'],
-      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C14013149B',
+      name: 'DKB Visa Debit',
+      pros: ['Keine Jahresgebühr', 'Gute Akzeptanz in Dubai', 'Kostenlose Bargeldabhebungen als Aktivkunde¹'],
+      cons: ['Nur Debit, keine echte Credit Card', '1,75% Fremdwährungsgebühr ohne Aktivstatus'],
+      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+      imageUrl: 'https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png',
     },
     {
       name: 'TF Bank Mastercard',
       pros: ['0€ Jahresgebühr', 'Einfache Beantragung', 'Backup für Notfälle'],
-      cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine echte 0%-Lösung'],
-      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+      cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine Lounge-Vorteile'],
+      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C213344020T',
+      imageUrl: 'http://www.fndsda.net/b/tfbank/TFBank_MastercardGold_NeuesKartendesign_01.png',
     },
   ],
   faq: [
     {
-      question: 'Welche Kreditkarte fuer Dubai ohne Fremdwaehrungsgebuehr?',
-      answer: 'Eine Karte ohne Fremdwaehrungsgebuehr ist fuer Dubai wichtig. DKB Visa ist als Aktivkunde weltweit ohne Fremdwaehrungsgebuehr einsetzbar.',
+      question: 'Welche Kreditkarte für Dubai ohne Fremdwährungsgebühr?',
+      answer: 'Für Hotels, Mietwagen und Kautionen wird in Dubai oft eine echte Credit Card (z.B. Advanzia) verlangt. Für den Alltag reicht meist auch eine Debitkarte wie DKB Visa, aber als Backup ist eine echte Credit Card ratsam.',
     },
     {
-      question: 'Was ist der groesste Kostenfehler bei Kartenzahlung in Dubai?',
-      answer: 'Die Abrechnung in EUR statt AED am Terminal. Waehle immer AED, sonst zahlst du durch schlechten Wechselkurs oft mehr.',
-    },
-    {
-      question: 'Soll ich in Dubai in Euro oder AED bezahlen?',
-      answer: 'Immer in AED zahlen. Die EUR-Abrechnung (DCC) ist fast immer nachteilig.',
+      question: 'Was ist der größte Kostenfehler bei Kartenzahlung in Dubai?',
+      answer: 'Die Abrechnung in EUR statt AED am Terminal. Wähle immer AED, sonst zahlst du durch schlechten Wechselkurs oft mehr.',
     },
     {
       question: 'Sollte ich in Euro oder Dirham zahlen?',
-      answer: 'Immer in Dirham zahlen. Euro-Abrechnung bringt schlechte Kurse und kann auf Dauer 5-10% teurer sein.',
+      answer: 'Immer in Dirham zahlen! Die Euro-Abrechnung (DCC) ist fast immer teurer und verschlechtert den Wechselkurs.',
+    },
+    {
+      question: 'Brauche ich in Dubai Bargeld trotz Kreditkarte?',
+      answer: 'Ja, für kleine Händler, Märkte und Trinkgeld. Nutze Karte wo möglich, aber halte einen kleinen Bargeldpuffer bereit.',
     },
   ],
   relatedPages: [
@@ -69,9 +73,11 @@ const pageData: SEOPageData = {
     { title: 'Kreditkarte Kanada ohne Gebühren', url: '/kreditkarte-kanada-ohne-gebuehren' },
     { title: 'Kreditkarte USA ohne Gebühren', url: '/kreditkarte-usa-ohne-gebuehren' },
   ],
-  title: 'Kreditkarte Dubai ohne Gebühren | Beste Karten für Dirham',
-  description: 'Vergleich von Kreditkarten ohne Fremdwährungsgebühr für Dubai. Spare bei Dirham-Zahlungen und finde die beste Reise-Karte.',
+  title: 'Beste Kreditkarte für Dubai 2026: Gebührenfrei bezahlen & abheben',
+  description: 'Beste Kreditkarte für Dubai 2026: Gebührenfrei bezahlen & abheben. Fokus auf Mietwagen-Kautionen, DCC und lokale Aufschläge.',
 };
+
+
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -79,5 +85,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
+    </div>
+  </>;
 }

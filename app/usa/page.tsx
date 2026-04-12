@@ -50,18 +50,15 @@ export default function Page() {
         <section className="bg-white rounded-xl p-6 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 py-6">
             <div className="space-y-4">
+
               <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-                Kreditkarten für Reisen in die USA im Vergleich
+                Beste Kreditkarte für die USA 2026 – Vergleich & Tipps
               </h1>
               <p className="text-gray-600 max-w-prose leading-relaxed">
-                In den USA sind Kreditkarten im Alltag stärker verbreitet als in Europa. Für Hotelbuchungen, 
-                Mietwagen und viele Geschäfte wird eine Kreditkarte vorausgesetzt. Debitkarten werden häufig 
-                nicht akzeptiert oder nur mit Einschränkungen.
+                Für Reisen in die USA ist eine echte Kreditkarte (Credit) unverzichtbar – besonders für Mietwagen und Hotels. Viele Anbieter akzeptieren keine Debitkarten! Mit der richtigen Karte sparst du Gebühren und bist überall flexibel. Hier findest du die besten Kreditkarten für die USA, inklusive Tipps zu Akzeptanz, Fremdwährungsgebühren und worauf du bei Mietwagen unbedingt achten solltest.
               </p>
               <p className="text-sm text-gray-600 max-w-prose">
-                Dieser <a href="/" className="text-orange-600 hover:underline">Kreditkarten-Vergleich</a> zeigt Karten mit Eigenschaften, die für USA-Reisen relevant sein können. 
-                Die Auswahl basiert auf den gewählten Filterkriterien. Ob eine Karte geeignet ist, hängt 
-                vom individuellen Nutzungsverhalten ab.
+                <strong>SEO-Tipp:</strong> In den USA ist eine Kreditkarte Pflicht für Mietwagen und Hotelbuchungen. Ohne Kreditkarte kann die Reise schnell teuer oder kompliziert werden. Vergleiche jetzt die besten Karten für deine USA-Reise und spare Gebühren!
               </p>
 
               <div className="flex gap-3">

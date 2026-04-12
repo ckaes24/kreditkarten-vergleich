@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Beste Kreditkarte für Weltreise',
-  intro: 'Eine Weltreise braucht eine Karte ohne Fremdwährungsgebühr und mit hoher Akzeptanz. DKB Visa ist die beste Wahl für Ausgaben und Bargeld unterwegs.',
+  intro: 'Beste Kreditkarte für die Weltreise 2026: Auf Weltreise brauchst du eine Karte mit weltweiter Akzeptanz, ohne Fremdwährungsgebühr und mit günstigen Konditionen für Bargeldabhebungen. So bist du in jedem Land flexibel, sparst Gebühren und hast immer Zugriff auf dein Geld – egal ob in Asien, Amerika oder Afrika.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [

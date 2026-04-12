@@ -22,6 +22,7 @@ const cards: Card[] = [
     travel: true,
     lounge: false,
     link: "https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369",
+    logo: "https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png",
     why: "Kostenlose Visa ohne Jahresgebühr. Sehr gut für Reisen und Alltag.",
   },
   {
@@ -41,6 +42,7 @@ const cards: Card[] = [
     travel: true,
     lounge: true,
     link: "https://www.financeads.net/tc.php?t=70334C14013832B",
+    logo: "https://banner.bluesummit.de/American%20Express/DE/platin/300x190.png",
     why: "Premium-Reisekarte mit Lounge-Zugang und Statusvorteilen.",
   },
   {
@@ -49,7 +51,8 @@ const cards: Card[] = [
     fee: 0,
     travel: true,
     lounge: false,
-    link: "https://www.financeads.net/tc.php?t=70334C213342396T",
+    link: "https://www.financeads.net/tc.php?t=70334C213344020T",
+    logo: "http://www.fndsda.net/b/tfbank/TFBank_MastercardGold_NeuesKartendesign_01.png",
     why: "Kostenlose Kreditkarte ohne Auslandseinsatzgebühren.",
   },
   {
@@ -71,6 +74,39 @@ const cards: Card[] = [
     link: "https://www.financeads.net/tc.php?t=70334C19318404B",
     logo: "https://www.santander.de/static/img/bestcard_basic_170x135.gif",
     why: "Solide Allround-Kreditkarte, kostenlos und weit akzeptiert.",
+  },
+  // --- NEU: bunq ---
+  {
+    name: "bunq Kreditkarte (Free & Paid)",
+    provider: "bunq",
+    fee: 0,
+    travel: true,
+    lounge: false,
+    link: "https://www.financeads.net/tc.php?t=70334C3156123233T",
+    logo: "https://framerusercontent.com/images/JRNpintM7rUmKKgvo3VAzyB0rg.png?width=1152&height=1152",
+    why: "Innovative Debit Mastercard, sowohl als kostenlose als auch als Premium-Version erhältlich. Sehr gute Akzeptanz und App, keine Auslandseinsatzgebühr.",
+  },
+  // --- NEU: Bank Norwegian ---
+  {
+    name: "Bank Norwegian Visa",
+    provider: "Bank Norwegian",
+    fee: 0,
+    travel: true,
+    lounge: false,
+    link: "https://www.financeads.net/tc.php?t=70334C438298174T",
+    logo: "https://res.cloudinary.com/banknorwegian/image/upload/dpr_auto/v1/prod-10/media/a3ckjxmu/bank-norwegian-card-art-de-1536x969-chip-radius-corners-horizontal.png",
+    why: "Kostenlose Visa-Kreditkarte mit Reiseversicherung, keine Auslandseinsatzgebühr, weltweit einsetzbar.",
+  },
+  // --- NEU: N26 (nur Empfehlung, kein Affiliate) ---
+  {
+    name: "N26 Mastercard (Empfehlung)",
+    provider: "N26",
+    fee: 0,
+    travel: true,
+    lounge: false,
+    link: "https://n26.com/r/chrisk4848?cid=0JY&lang=de",
+    logo: "https://images.ctfassets.net/q33z48p65a6w/6mRcFZaMyr1Kg8MUkGQkLo/e149ce5908cd6a8e2cdf3976b4226244/2310_Web-asset_Mastercard.png",
+    why: "Empfehlung: Moderne App, sehr gute Akzeptanz, keine Auslandseinsatzgebühr. Hinweis: Kein echter Affiliate-Link, sondern persönliche Empfehlung.",
   },
 ];
 
@@ -106,6 +142,9 @@ export default function CreditCards() {
             <option>Santander</option>
             <option>TF Bank</option>
             <option>Advanzia</option>
+            <option>Bank Norwegian</option>
+            <option>bunq</option>
+            <option>N26</option>
           </select>
         </div>
 
@@ -172,21 +211,18 @@ export default function CreditCards() {
                   }}
                 />
 
-                <div className="mt-2 text-sm">
-                  {logoLoaded[c.name] ? (
-                    <span className="text-green-600">Logo geladen</span>
-                  ) : (
-                    <a href={c.logo} target="_blank" className="text-blue-600 underline">
-                      Bild direkt öffnen (Debug)
-                    </a>
-                  )}
-                </div>
+                {/* Hinweis nur anzeigen, wenn das Logo NICHT geladen wurde */}
+                {!logoLoaded[c.name] && (
+                  <div className="mt-2 text-sm">
+                    <span className="text-red-600">Logo konnte nicht geladen werden</span>
+                  </div>
+                )}
               </div>
             )}
 
             <ul className="text-sm mb-3">
               <li>💶 {c.fee === 0 ? "0 € Jahresgebühr" : c.fee + " € Jahresgebühr"}</li>
-              <li>✈️ Reisen: {c.travel ? "Ja" : "Nein"}</li>
+              <li>🛡️ Reiseversicherung: {c.why.toLowerCase().includes('versicherung') ? "Ja" : "Nein"}</li>
               <li>🛋️ Lounge: {c.lounge ? "Ja" : "Nein"}</li>
             </ul>
 
@@ -210,28 +246,39 @@ export default function CreditCards() {
 
       {/* VERGLEICHSTABELLE */}
       <div className="overflow-x-auto mt-10">
-        <table className="w-full bg-white rounded-xl shadow text-sm">
-          <thead className="bg-gray-200">
+        <table className="w-full bg-white rounded-xl shadow text-sm text-gray-900">
+          <thead className="bg-slate-100 text-gray-900">
             <tr>
-              <th className="p-2 text-left">Karte</th>
-              <th>Gebühr</th>
-              <th>Reisen</th>
-              <th>Lounge</th>
-              <th></th>
+              <th className="p-3 text-left font-semibold">Karte</th>
+              <th className="font-semibold pl-2">Gebühr</th>
+              <th className="font-semibold pl-2">Versicherung</th>
+              <th className="font-semibold pl-2">Lounge</th>
+              <th className="font-semibold"></th>
             </tr>
           </thead>
           <tbody>
             {cards.map((c) => (
-              <tr key={c.name} className="border-t">
-                <td className="p-2">{c.name}</td>
-                <td>{c.fee === 0 ? "0 €" : c.fee + " €"}</td>
-                <td>{c.travel ? "Ja" : "Nein"}</td>
-                <td>{c.lounge ? "Ja" : "Nein"}</td>
+              <tr key={c.name} className="border-t border-gray-200">
+                <td className="p-3 font-medium flex items-center gap-2">
+                  {c.logo && (
+                    <img
+                      src={c.logo}
+                      alt={c.provider + " Kartenbild"}
+                      className="inline-block h-7 w-12 object-contain rounded mr-2 bg-white border"
+                      style={{ minWidth: 48 }}
+                      loading="lazy"
+                    />
+                  )}
+                  {c.name}
+                </td>
+                <td className="text-gray-900">{c.fee === 0 ? "0 € p.a." : c.fee + " € p.a."}</td>
+                <td className="text-gray-900">{c.why.toLowerCase().includes('versicherung') ? "Ja" : "Nein"}</td>
+                <td className="text-gray-900">{c.lounge ? "Ja" : "Nein"}</td>
                 <td>
                   <a
                     href={c.link}
                     target="_blank"
-                    className="text-blue-600 underline"
+                    className="text-blue-700 underline font-medium"
                   >
                     Beantragen
                   </a>

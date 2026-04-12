@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { SEOCreditCard } from '../../data/seoCreditCards';
 
 interface FAQItem {
@@ -25,43 +26,46 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Kanada ohne Gebühren',
-  intro: 'In Kanada ist Kartenzahlung sehr einfach, aber Fremdwaehrungsgebuehren und ATM-Kosten koennen sich bei laengeren Reisen deutlich summieren. DKB Visa ist als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr nutzbar und damit eine starke Alltagsloesung.',
+  intro: 'Beste Kreditkarte für Kanada 2026: So vermeidest du Gebühren. In Kanada ist Kartenzahlung sehr einfach, aber Fremdwährungsgebühren und ATM-Kosten summieren sich bei längeren Reisen schnell. Die größten Kostenfallen: viele kleine ATM-Abhebungen, EUR-Abrechnung am Terminal (DCC) und Fremdwährungsgebühren. Die DKB Visa¹ ist eine starke Alltagslösung.',
   topRecommendation: {
-    name: 'DKB Visa',
-    pros: ['0€ Jahresgebühr', 'Für Aktivkunden 0% Fremdwährungsgebühr', 'Visa wird in Kanada breit akzeptiert', 'Starke Option für Bezahlen und Abheben'],
-    cons: ['1,75% Fremdwährungsgebühr ohne Aktivstatus', '400€ Tageslimit für Abhebungen'],
-    affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+    name: 'Advanzia Gebührenfrei Mastercard',
+    pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
+    cons: ['Kein Girokonto, reine Kreditkarte', 'Zins bei Teilzahlung'],
+    affiliateLink: 'https://www.financeads.net/tc.php?t=70334C13814286T',
+    imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
   },
   alternatives: [
     {
-      name: 'American Express Gold',
-      pros: ['0% Fremdwährungsgebühren', 'Reiseversicherung inklusive', 'Bonusprogramm bei Auslandsausgaben'],
-      cons: ['144€ Jahresgebühr', 'Nicht überall in Kanada akzeptiert', 'Bonitätsprüfung erforderlich'],
-      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C14013149B',
+      name: 'DKB Visa Debit',
+      pros: ['Keine Jahresgebühr', 'Gute Akzeptanz in Kanada', 'Kostenlose Bargeldabhebungen als Aktivkunde¹'],
+      cons: ['Nur Debit, keine echte Credit Card', '1,75% Fremdwährungsgebühr ohne Aktivstatus'],
+      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+      imageUrl: 'https://a.neqty.net/DKB/Karten/DKB_Visa_Debitkarte_landscape_500x315.png',
     },
     {
       name: 'TF Bank Mastercard',
       pros: ['0€ Jahresgebühr', 'Einfache Beantragung', 'Backup für Notfälle'],
-      cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine echte 0%-Lösung'],
-      affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+      cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine Lounge-Vorteile'],
+      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C213344020T',
+      imageUrl: 'http://www.fndsda.net/b/tfbank/TFBank_MastercardGold_NeuesKartendesign_01.png',
     },
   ],
   faq: [
     {
-      question: 'Welche Kreditkarte fuer Kanada ohne Fremdwaehrungsgebuehr?',
-      answer: 'Wichtig ist eine Karte ohne Fremdwaehrungsgebuehr. DKB Visa bietet das weltweit mit Aktivstatus (mind. 700 EUR monatlicher Geldeingang).',
+      question: 'Welche Kreditkarte für Kanada ohne Fremdwährungsgebühr?',
+      answer: 'Für Hotels, Mietwagen und Kautionen wird in Kanada oft eine echte Credit Card (z.B. Advanzia) verlangt. Für den Alltag reicht meist auch eine Debitkarte wie DKB Visa, aber als Backup ist eine echte Credit Card ratsam.',
     },
     {
-      question: 'Wie hoch sind ATM-Gebuehren in Kanada?',
-      answer: 'Je nach Betreiber fallen fixe Gebuehren pro Abhebung an. Deshalb lieber weniger oft und in groesseren Betraegen abheben.',
+      question: 'Wie hoch sind ATM-Gebühren in Kanada?',
+      answer: 'Je nach Betreiber fallen fixe Gebühren pro Abhebung an. Deshalb lieber weniger oft und in größeren Beträgen abheben.',
     },
     {
       question: 'Soll ich in Kanada in Euro oder CAD zahlen?',
-      answer: 'Immer in CAD zahlen. Die EUR-Abrechnung am Terminal ist in der Regel teurer.',
+      answer: 'Immer in CAD zahlen! Die EUR-Abrechnung am Terminal (DCC) ist in der Regel teurer.',
     },
     {
-      question: 'Sollte ich in Euro oder CAD zahlen?',
-      answer: 'Immer in CAD zahlen. Euro-Abrechnung nutzt schlechte Wechselkurse und ist oft 5-10% teurer.',
+      question: 'Brauche ich in Kanada Bargeld trotz Kreditkarte?',
+      answer: 'Ja, besonders außerhalb großer Städte. Nutze Karte wo möglich und halte einen sinnvollen Bargeldpuffer für Märkte, Taxis und kleine Anbieter bereit.',
     },
   ],
   relatedPages: [
@@ -69,9 +73,11 @@ const pageData: SEOPageData = {
     { title: 'Kreditkarte Dubai ohne Gebühren', url: '/kreditkarte-dubai-ohne-gebuehren' },
     { title: 'Kreditkarte ohne Fremdwährungsgebühr Vergleich', url: '/kreditkarte-ohne-fremdwaehrungsgebuehr-vergleich' },
   ],
-  title: 'Kreditkarte Kanada ohne Gebühren | Beste Karten für CAD',
-  description: 'Vergleich von Kreditkarten ohne Fremdwährungsgebühr für Kanada. Spare bei Zahlungen und Abhebungen in Kanadischem Dollar.',
+  title: 'Beste Kreditkarte für Kanada 2026: Gebührenfrei bezahlen & abheben',
+  description: 'Beste Kreditkarte für Kanada 2026: Gebührenfrei bezahlen & abheben. Mit Fokus auf Mietwagen, ATM-Gebühren und DCC.',
 };
+
+
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -79,5 +85,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
+    </div>
+  </>;
 }

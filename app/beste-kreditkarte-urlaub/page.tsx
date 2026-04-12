@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Beste Kreditkarte Urlaub',
-  intro: 'Die beste Kreditkarte fuer den Urlaub spart nicht nur Gebuehren, sondern verhindert auch Stress bei Akzeptanzproblemen. Besonders wichtig sind Fremdwaehrungskosten, ATM-Nebenkosten und DCC-Fallen. DKB Visa ist als Aktivkunde (mind. 700 EUR Geldeingang/Monat) weltweit ohne Fremdwaehrungsgebuehr nutzbar.',
+  intro: 'Beste Kreditkarte für den Urlaub 2026: Mit der richtigen Karte sparst du nicht nur Gebühren, sondern bist weltweit flexibel. Achte auf Karten ohne Fremdwährungsgebühr, mit kostenloser Bargeldabhebung und hoher Akzeptanz. So genießt du deinen Urlaub ohne böse Überraschungen an Kasse oder Geldautomat.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [

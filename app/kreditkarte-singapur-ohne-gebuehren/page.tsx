@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { SEOCreditCard, seoCreditCards } from '../../data/seoCreditCards';
 
 interface FAQItem {
@@ -25,25 +26,28 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Singapur ohne Gebühren',
-  intro: 'In Singapur wird fast alles mit Karte gezahlt. Eine Kreditkarte ohne Fremdwährungsgebühr senkt die Kosten bei Singapur-Dollar-Zahlungen.',
-  topRecommendation: seoCreditCards['dkb-visa'],
+  intro: 'Beste Kreditkarte für Singapur 2026: In Singapur wird fast alles mit Karte gezahlt, aber viele Händler verlangen Surcharges und lokale ATMs berechnen Gebühren. Achte auf eine Karte ohne Fremdwährungsgebühr und zahle immer in SGD, um Zusatzkosten zu vermeiden.',
+  topRecommendation: {
+    ...seoCreditCards['dkb-visa'],
+    pros: seoCreditCards['dkb-visa'].pros.map(p => p.includes('Aktivkunde') ? p.replace('Aktivkunde', 'Aktivkunde¹') : p),
+  },
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Kann ich dort kostenlos bezahlen?',
-      answer: 'Nicht komplett. Mit DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr, aber die Karte muss zuerst akzeptiert werden.',
+      question: 'Kann ich in Singapur kostenlos bezahlen?',
+      answer: 'Mit der DKB Visa als Aktivkunde sparst du die Fremdwährungsgebühr. Beachte aber, dass viele Händler Surcharges (1–3 %) verlangen und lokale ATMs 3–5 SGD pro Abhebung berechnen.',
     },
     {
-      question: 'Welche Karte ist die beste?',
-      answer: 'Für Singapur ist DKB Visa als Aktivkunde die beste Wahl. Amex Gold ist nur sinnvoll, wenn du die Akzeptanz prüfen kannst.',
-    },
-    {
-      question: 'Gibt es Gebühren beim Abheben?',
-      answer: 'Ja, lokale ATMs können Gebühren verlangen. Spare die Fremdwährungsgebühr, aber rechne mit 3-5 SGD pro Abhebung.',
+      question: 'Welche Kreditkarte ist in Singapur am besten?',
+      answer: 'Die DKB Visa ist als Aktivkunde (mind. 700 € Geldeingang/Monat) weltweit OHNE Fremdwährungsgebühren und wird in Singapur breit akzeptiert.',
     },
     {
       question: 'Sollte ich in Euro oder SGD zahlen?',
-      answer: 'Immer in SGD zahlen. Euro-Abrechnung hat schlechtere Wechselkurse und ist oft merklich teurer.',
+      answer: 'Immer in SGD zahlen! Die Abrechnung in Euro (DCC) ist fast immer teurer und verschlechtert den Wechselkurs.',
+    },
+    {
+      question: 'Brauche ich eine zweite Kreditkarte für Singapur?',
+      answer: 'Eine zweite Karte als Backup ist sinnvoll, falls Akzeptanzprobleme, Limits oder Sicherheitssperren auftreten.',
     },
   ],
   relatedPages: [
@@ -51,9 +55,12 @@ const pageData: SEOPageData = {
     { title: 'Kreditkarte Japan ohne Gebühren', url: '/kreditkarte-japan-ohne-gebuehren' },
     { title: 'Kreditkarte ohne Fremdwährungsgebühr Vergleich', url: '/kreditkarte-ohne-fremdwaehrungsgebuehr-vergleich' },
   ],
-  title: 'Kreditkarte Singapur ohne Gebühren | Beste Karten für SGD',
-  description: 'Vergleich von Kreditkarten ohne Fremdwährungsgebühr für Singapur. Spare bei Zahlungen in Singapur-Dollar.',
+  title: 'Beste Kreditkarte für Singapur 2026: So vermeidest du Gebühren',
+  description: 'Vergleich der besten Kreditkarten ohne Fremdwährungsgebühr für Singapur. Experten-Tipps zu Surcharges, ATM-Gebühren und Kartenwahl.',
 };
+
+
+
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -61,5 +68,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
+    </div>
+  </>;
 }

@@ -25,8 +25,17 @@ export const seoPages: Record<string, SEOPageData> = {
   'kreditkarte-usa-ohne-gebuehren': {
     keyword: 'USA ohne Gebühren',
     intro: 'In den USA zahlst du schnell drauf, wenn deine Karte Fremdwaehrungsgebuehren berechnet oder ATM-Aufschlaege nicht abfedert. Ein typischer Praxisfall: Bezahlen klappt, aber beim Mietwagen wird die Karte fuer die Kaution abgelehnt, weil nur echte Credit-Karten akzeptiert werden. Genau deshalb lohnt eine Kombi aus alltagstauglicher Reisekarte plus echter Credit-Backupkarte. Wichtig zur DKB Visa: Als Aktivkunde mit mindestens 700 EUR Geldeingang pro Monat entfaellt die Fremdwaehrungsgebuehr weltweit, ohne Aktivstatus faellt sie an.',
-    topRecommendation: seoCreditCards['amex-platinum'],
-    alternatives: [seoCreditCards['amex-gold'], seoCreditCards['dkb-visa']],
+    topRecommendation: seoCreditCards['dkb-visa'],
+    alternatives: [
+      {
+        name: 'Advanzia Gebührenfrei Mastercard',
+        pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
+        cons: ['Kein Girokonto, reine Kreditkarte', 'Zins bei Teilzahlung'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C13814286T',
+        imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
+      },
+      seoCreditCards['amex-gold'],
+    ],
     faq: [
       {
         question: 'Welche Kreditkarte fuer USA-Reise ohne Fremdwaehrungsgebuehr?',
@@ -59,7 +68,16 @@ export const seoPages: Record<string, SEOPageData> = {
     keyword: 'Thailand abheben kostenlos',
     intro: 'Thailand ist ein Klassiker fuer versteckte Kosten: Viele Automaten berechnen feste ATM-Gebuehren pro Abhebung, zusaetzlich drohen schlechte Wechselkurse durch EUR-Abrechnung am Terminal. Darum ist eine gebuehrenarme Karte plus kluge Abhebestrategie entscheidend. Wichtig zur DKB Visa: Als Aktivkunde mit mindestens 700 EUR Geldeingang monatlich faellt weltweit keine Fremdwaehrungsgebuehr an.',
     topRecommendation: seoCreditCards['dkb-visa'],
-    alternatives: [seoCreditCards['tf-bank-mastercard'], seoCreditCards['amex-gold']],
+    alternatives: [
+      seoCreditCards['tf-bank-mastercard'],
+      {
+        name: 'bunq Kreditkarte (Free & Paid)',
+        pros: ['0€ Jahresgebühr (Free möglich)', 'Mastercard, sehr gute Akzeptanz', 'Keine Fremdwährungsgebühr', 'Sehr gute App, auch für längere Aufenthalte'],
+        cons: ['Kein Kreditrahmen, reine Debitkarte', 'Premium-Features kostenpflichtig'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C3156123233T',
+        imageUrl: 'https://framerusercontent.com/images/JRNpintM7rUmKKgvo3VAzyB0rg.png?width=1152&height=1152',
+      },
+    ],
     faq: [
       {
         question: 'Welche Kreditkarte fuer Thailand ohne ATM-Gebuehren?',
@@ -79,8 +97,8 @@ export const seoPages: Record<string, SEOPageData> = {
       { title: 'Kreditkarte Studenten Ausland kostenlos', url: '/kreditkarte-studenten-ausland-kostenlos' },
       { title: 'Kreditkarte Kreuzfahrten', url: '/kreuzfahrten' },
     ],
-    title: 'Beste Kreditkarte für Thailand abheben kostenlos | Geld sparen',
-    description: 'Kostenlose Abhebungen in Thailand mit den besten Kreditkarten. Vermeiden Sie hohe Gebühren und sparen Sie bei jeder Transaktion.',
+    title: 'Beste Kreditkarte für Thailand 2026: Gebührenfrei bezahlen & abheben',
+    description: 'Beste Kreditkarte für Thailand 2026: Gebührenfrei bezahlen & abheben. Mit klarem Fokus auf ATM-Fixgebühren und DCC-Vermeidung.',
   },
   'kreditkarte-studenten-ausland-kostenlos': {
     keyword: 'Studenten Ausland kostenlos',
@@ -221,7 +239,22 @@ export const seoPages: Record<string, SEOPageData> = {
     keyword: 'ohne SCHUFA Reisen',
     intro: 'Kreditkarten ohne SCHUFA-Prüfung für Reisen. Ideal, wenn Sie keine Bonitätsprüfung wünschen.',
     topRecommendation: seoCreditCards['tf-bank-mastercard'],
-    alternatives: [seoCreditCards['dkb-visa'], seoCreditCards['amex-gold']],
+    alternatives: [
+      {
+        name: 'bunq Kreditkarte (Free & Paid)',
+        pros: ['0€ Jahresgebühr (Free möglich)', 'Keine SCHUFA-Prüfung', 'Debit Mastercard', 'Sehr gute App'],
+        cons: ['Kein Kreditrahmen', 'Premium-Features kostenpflichtig'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C3156123233T',
+        imageUrl: 'https://framerusercontent.com/images/JRNpintM7rUmKKgvo3VAzyB0rg.png?width=1152&height=1152',
+      },
+      {
+        name: 'Bank Norwegian Visa',
+        pros: ['0€ Jahresgebühr', 'Visa, weltweit akzeptiert', 'Reiseversicherung inklusive', 'Keine Fremdwährungsgebühr'],
+        cons: ['Bonitätsprüfung erforderlich', 'Kein Girokonto, reine Kreditkarte'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C438298174T',
+        imageUrl: 'https://res.cloudinary.com/banknorwegian/image/upload/dpr_auto/v1/prod-10/media/a3ckjxmu/bank-norwegian-card-art-de-1536x969-chip-radius-corners-horizontal.png',
+      },
+    ],
     faq: [
       {
         question: 'Was ist SCHUFA?',
@@ -273,21 +306,39 @@ export const seoPages: Record<string, SEOPageData> = {
   },
   'beste-kreditkarte-usa-reisen-deutsche': {
     keyword: 'USA Reisen Deutsche',
-    intro: 'Fuer Deutsche in den USA ist nicht nur die Fremdwaehrungsgebuehr entscheidend, sondern vor allem das Credit-vs-Debit-Problem bei Mietwagen und Hotelkautionen. Viele Anbieter akzeptieren dort nur echte Credit-Karten. DKB Visa bleibt stark fuer den Alltag, mit dem wichtigen Hinweis: 0% Fremdwaehrungsgebuehr weltweit nur fuer Aktivkunden (mind. 700 EUR Geldeingang/Monat).',
-    topRecommendation: seoCreditCards['amex-platinum'],
-    alternatives: [seoCreditCards['amex-gold'], seoCreditCards['dkb-visa']],
+    intro: 'Für Deutsche in den USA ist eine echte Credit Card für Hotels, Mietwagen und Kautionen Pflicht. Debitkarten wie die DKB Visa funktionieren im Alltag, werden aber an vielen Countern abgelehnt. Die Advanzia Gebührenfrei Mastercard ist als echte Credit Card ohne Jahresgebühr und ohne Fremdwährungsgebühr ideal als Hauptkarte.',
+    topRecommendation: {
+      name: 'Advanzia Gebührenfrei Mastercard',
+      pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
+      cons: ['Kein Girokonto, reine Kreditkarte', 'Zins bei Teilzahlung'],
+      affiliateLink: 'https://www.financeads.net/tc.php?t=70334C13814286T',
+    },
+    alternatives: [
+      {
+        name: 'DKB Visa Debit',
+        pros: ['Keine Jahresgebühr', 'Gute Akzeptanz in den USA', 'Kostenlose Bargeldabhebungen als Aktivkunde'],
+        cons: ['Nur Debit, keine echte Credit Card', '1,75% Fremdwährungsgebühr ohne Aktivstatus'],
+        affiliateLink: 'https://www.awin1.com/awclick.php?gid=441465&mid=11329&awinaffid=1689369',
+      },
+      {
+        name: 'TF Bank Mastercard',
+        pros: ['0€ Jahresgebühr', 'Einfache Beantragung', 'Backup für Notfälle'],
+        cons: ['1,99% Fremdwährungsgebühren', 'Niedrigeres Limit (1.500€)', 'Keine Lounge-Vorteile'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C213344020T',
+      },
+    ],
     faq: [
       {
-        question: 'Welche Kreditkarte fuer Mietwagen in den USA als Deutscher?',
-        answer: 'Nimm fuer Kautionen eine echte Credit-Karte mit. Kostenlose Optionen wie TF Bank oder Advanzia sind als Backup stark, weil Debitkarten am Counter haeufig abgelehnt werden.',
+        question: 'Welche Kreditkarte für Mietwagen in den USA als Deutscher?',
+        answer: 'Für Kautionen wird fast immer eine echte Credit Card (z.B. Advanzia) verlangt. Debitkarten wie DKB Visa werden oft abgelehnt.',
       },
       {
-        question: 'DKB Visa USA: Ist die Fremdwaehrungsgebuehr wirklich 0 Prozent?',
-        answer: 'Ja, aber nur mit Aktivstatus. Bei mindestens 700 EUR monatlichem Geldeingang entfaellt die Fremdwaehrungsgebuehr weltweit. Ohne Aktivstatus fallen Gebuehren an.',
+        question: 'DKB Visa USA: Ist die Fremdwährungsgebühr wirklich 0 Prozent?',
+        answer: 'Ja, aber nur mit Aktivstatus. Bei mindestens 700 EUR monatlichem Geldeingang entfällt die Fremdwährungsgebühr weltweit. Ohne Aktivstatus fallen Gebühren an.',
       },
       {
-        question: 'Brauche ich fuer die USA eine extra Kreditkarte neben meiner Debitkarte?',
-        answer: 'Fuer Hotels und Mietwagen lautet die sichere Antwort: ja. Eine echte Credit-Karte verhindert Stress bei Kautionen und erhoeht die Akzeptanz deutlich.',
+        question: 'Brauche ich für die USA eine extra Kreditkarte neben meiner Debitkarte?',
+        answer: 'Für Hotels und Mietwagen lautet die sichere Antwort: ja. Eine echte Credit Card verhindert Stress bei Kautionen und erhöht die Akzeptanz deutlich.',
       },
     ],
     relatedPages: [
@@ -302,7 +353,16 @@ export const seoPages: Record<string, SEOPageData> = {
     keyword: 'für Backpacking',
     intro: 'Kreditkarten für Backpacking-Reisen. Kostengünstig, sicher und praktisch für unterwegs.',
     topRecommendation: seoCreditCards['dkb-visa'],
-    alternatives: [seoCreditCards['tf-bank-mastercard'], seoCreditCards['amex-gold']],
+    alternatives: [
+      seoCreditCards['tf-bank-mastercard'],
+      {
+        name: 'N26 Mastercard',
+        pros: ['0€ Jahresgebühr', 'Einfache Beantragung online', 'Gute Konto-App für unterwegs', 'Keine Fremdwährungsgebühr'],
+        cons: ['Kein Kreditrahmen, reine Debitkarte', 'Abhebungen im Ausland teilweise kostenpflichtig'],
+        affiliateLink: 'https://n26.com/r/chrisk4848?cid=0JY&lang=de',
+        imageUrl: 'https://images.ctfassets.net/q33z48p65a6w/6mRcFZaMyr1Kg8MUkGQkLo/e149ce5908cd6a8e2cdf3976b4226244/2310_Web-asset_Mastercard.png',
+      },
+    ],
     faq: [
       {
         question: 'Was brauchen Backpacker?',
@@ -329,7 +389,22 @@ export const seoPages: Record<string, SEOPageData> = {
     keyword: 'ohne Jahresgebühr Reisen',
     intro: 'Kreditkarten ohne Jahresgebühr für Reisen. Sparen Sie die Grundgebühr und zahlen nur bei Nutzung.',
     topRecommendation: seoCreditCards['dkb-visa'],
-    alternatives: [seoCreditCards['tf-bank-mastercard'], seoCreditCards['amex-gold']],
+    alternatives: [
+      {
+        name: 'bunq Kreditkarte (Free & Paid)',
+        pros: ['0€ Jahresgebühr (Free möglich)', 'Keine Fremdwährungsgebühr', 'Sehr gute App', 'Debit Mastercard'],
+        cons: ['Kein Kreditrahmen', 'Premium-Features kostenpflichtig'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C3156123233T',
+        imageUrl: 'https://framerusercontent.com/images/JRNpintM7rUmKKgvo3VAzyB0rg.png?width=1152&height=1152',
+      },
+      {
+        name: 'Advanzia Gebührenfrei Mastercard',
+        pros: ['0€ Jahresgebühr', 'Echte Credit Mastercard', 'Keine Fremdwährungsgebühr', 'Weltweit akzeptiert'],
+        cons: ['Kein Girokonto, reine Kreditkarte', 'Zins bei Teilzahlung'],
+        affiliateLink: 'https://www.financeads.net/tc.php?t=70334C13814286T',
+        imageUrl: 'https://xn--gebhrenfrei-vhb.de/assets/common/images/card-DEU-B2C.webp',
+      },
+    ],
     faq: [
       {
         question: 'Warum ohne Jahresgebühr?',

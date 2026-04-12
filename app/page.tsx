@@ -132,6 +132,7 @@ export default function Page() {
                     Warum diese Karte?
                   </summary>
                   <p className="mt-2">
+                    {/* bestReason(c) kann für neue Karten ggf. angepasst werden, ist aber dynamisch. */}
                     {bestReason(c)}
                   </p>
                 </details>

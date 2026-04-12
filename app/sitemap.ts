@@ -2,6 +2,21 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://kreditkarten-vergleich.de'
+  const destinationPages = [
+    '/kreditkarte-usa-ohne-gebuehren',
+    '/kreditkarte-thailand-abheben-kostenlos',
+    '/kreditkarte-bali-ohne-gebuehren',
+    '/kreditkarte-mexiko-ohne-gebuehren',
+    '/kreditkarte-dubai-ohne-gebuehren',
+    '/kreditkarte-vietnam-ohne-gebuehren',
+    '/kreditkarte-island-ohne-gebuehren',
+    '/kreditkarte-japan-ohne-gebuehren',
+    '/kreditkarte-marokko-ohne-gebuehren',
+    '/kreditkarte-norwegen-ohne-gebuehren',
+    '/kreditkarte-suedafrika-ohne-gebuehren',
+    '/kreditkarte-kanada-ohne-gebuehren',
+    '/kreditkarte-australien-ohne-gebuehren',
+  ]
   
   return [
     {
@@ -52,5 +67,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    ...destinationPages.map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
   ]
 }

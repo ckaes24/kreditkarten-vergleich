@@ -25,7 +25,7 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte ohne Auslandeinsatzgebühr',
-  intro: 'Auslandseinsatzgebühren von 1,75-3% machen Karten teuer. Mit einer Karte ohne Fremdwährungsgebühr und ohne Jahresgebühr sparst du bei jedem Bezahlvorgang.',
+  intro: 'Beste Kreditkarte ohne Auslandsgebühr 2026: Mit einer Karte ohne Fremdwährungsgebühr und ohne Jahresgebühr sparst du bei jeder Zahlung im Ausland bares Geld. Ideal für Reisen, Online-Shopping in Fremdwährung und längere Auslandsaufenthalte. So vermeidest du versteckte Kosten und hast volle Kostenkontrolle.',
   topRecommendation: seoCreditCards['dkb-visa'],
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [

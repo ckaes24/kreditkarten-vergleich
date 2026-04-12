@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { SEOCreditCard, seoCreditCards } from '../../data/seoCreditCards';
 
 interface FAQItem {
@@ -25,25 +26,28 @@ interface SEOPageData {
 
 const pageData: SEOPageData = {
   keyword: 'Kreditkarte Bali ohne Gebühren',
-  intro: 'Auf Bali entsteht der groesste Kostenblock oft durch lokale ATM-Gebuehren und schlechte EUR-Umrechnung am Terminal. Mit einer passenden Reisekarte kannst du diese Fallen vermeiden. Wichtig bei DKB Visa: Als Aktivkunde mit mindestens 700 EUR Geldeingang pro Monat faellt weltweit keine Fremdwaehrungsgebuehr an.',
-  topRecommendation: seoCreditCards['dkb-visa'],
+  intro: 'Beste Kreditkarte für Bali 2026: So vermeidest du Gebühren. Auf Bali entstehen die größten Kosten durch lokale ATM-Gebühren, Fremdwährungsgebühren und schlechte EUR-Umrechnung am Terminal (DCC). Die DKB Visa¹ funktioniert an fast allen indonesischen Terminals.',
+  topRecommendation: {
+    ...seoCreditCards['dkb-visa'],
+    pros: seoCreditCards['dkb-visa'].pros.map(p => p.includes('Aktivkunde') ? p.replace('Aktivkunde', 'Aktivkunde¹') : p),
+  },
   alternatives: [seoCreditCards['amex-gold'], seoCreditCards['tf-bank-mastercard']],
   faq: [
     {
-      question: 'Welche Kreditkarte fuer Bali ohne Fremdwaehrungsgebuehr?',
-      answer: 'Fuer Bali ist eine Karte ohne Fremdwaehrungsgebuehr zentral. DKB Visa ist dafuer als Aktivkunde besonders stark; ohne Aktivstatus fallen 1,75% an.',
+      question: 'Welche Kreditkarte für Bali ohne Fremdwährungsgebühr?',
+      answer: 'Für Bali ist eine Karte ohne Fremdwährungsgebühr zentral. Die DKB Visa ist als Aktivkunde weltweit OHNE Fremdwährungsgebühr nutzbar. Ohne Aktivstatus fallen 1,75 % an.',
     },
     {
-      question: 'Wie hoch sind ATM-Gebuehren auf Bali?',
-      answer: 'Viele Automaten berechnen fixe Zusatzkosten. Deshalb lieber in weniger, aber groesseren Betraegen abheben statt haeufig kleine Summen.',
+      question: 'Wie hoch sind ATM-Gebühren auf Bali?',
+      answer: 'Viele Automaten berechnen fixe Zusatzkosten. Deshalb lieber in weniger, aber größeren Beträgen abheben statt häufig kleine Summen.',
     },
     {
-      question: 'Soll ich auf Bali in Euro oder Rupiah bezahlen?',
-      answer: 'Immer in Rupiah zahlen. Die Euro-Abrechnung (DCC) ist in der Regel deutlich teurer.',
+      question: 'Sollte ich auf Bali in Euro oder Rupiah zahlen?',
+      answer: 'Immer in Rupiah zahlen! Die Euro-Abrechnung (DCC) ist fast immer teurer und verschlechtert den Wechselkurs.',
     },
     {
       question: 'Brauche ich auf Bali Bargeld trotz Kreditkarte?',
-      answer: 'Ja, vor allem fuer kleinere Warungs, Fahrer und lokale Dienstleistungen. Karte plus Bargeldreserve ist die praktikabelste Kombination.',
+      answer: 'Ja, vor allem für kleinere Warungs, Fahrer und lokale Dienstleistungen. Karte plus Bargeldreserve ist die praktikabelste Kombination.',
     },
   ],
   relatedPages: [
@@ -51,9 +55,11 @@ const pageData: SEOPageData = {
     { title: 'Kreditkarte Australien ohne Gebühren', url: '/kreditkarte-australien-ohne-gebuehren' },
     { title: 'Kreditkarte Thailand abheben kostenlos', url: '/kreditkarte-thailand-abheben-kostenlos' },
   ],
-  title: 'Kreditkarte Bali ohne Gebühren | Beste Karten für Rupiah',
-  description: 'Vergleich von Kreditkarten ohne Fremdwährungsgebühr für Bali. Spare bei Zahlungen und Abhebungen in Indonesien.',
+  title: 'Beste Kreditkarte für Bali 2026: Gebührenfrei bezahlen & abheben',
+  description: 'Beste Kreditkarte für Bali 2026: Gebührenfrei bezahlen & abheben. Praktische Hinweise zu ATM-Fixgebühren und DCC vor Ort.',
 };
+
+
 
 export const metadata: Metadata = {
   title: pageData.title,
@@ -61,5 +67,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+    <div style={{ fontSize: '0.8em', color: '#888', marginTop: 24, textAlign: 'left' }}>
+      <span style={{ verticalAlign: 'super', fontSize: '0.7em' }}>¹</span> DKB Visa: 0 % Fremdwährungsgebühr und kostenlose Abhebungen nur als Aktivkunde (mind. 700 € Geldeingang/Monat). Ohne Aktivstatus 1,75 % Fremdwährungsgebühr und ggf. Gebühren für Abhebungen.
+    </div>
+  </>;
 }

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import SEOPageTemplate from '../../components/SEOPageTemplate';
+import AutorenBox from '../../components/AutorenBox';
 import { seoPages } from '../../data/seoPages';
 
 const pageData = seoPages['kreditkarte-ohne-schufa-reisen'];
@@ -9,6 +10,10 @@ export const metadata: Metadata = {
   description: pageData.description,
 };
 
+
+
 export default function Page() {
-  return <SEOPageTemplate {...pageData} />;
+  return <>
+    <SEOPageTemplate {...pageData} />
+  </>;
 }

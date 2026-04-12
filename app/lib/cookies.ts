@@ -22,7 +22,7 @@ const DEFAULT_PREFERENCES: CookiePreferences = {
   functional: false,
   analytics: false,
   marketing: false,
-  timestamp: Date.now()
+  timestamp: 0 // Kein dynamischer Wert bei SSR
 }
 
 /**
@@ -50,7 +50,7 @@ export function getCookiePreferences(): CookiePreferences {
       functional: parsed.functional ?? false,
       analytics: parsed.analytics ?? false,
       marketing: parsed.marketing ?? false,
-      timestamp: parsed.timestamp ?? Date.now()
+      timestamp: typeof window !== 'undefined' ? (parsed.timestamp ?? Date.now()) : (parsed.timestamp ?? 0)
     }
   } catch {
     return DEFAULT_PREFERENCES
@@ -66,7 +66,7 @@ export function saveCookiePreferences(prefs: Partial<CookiePreferences>) {
     functional: prefs.functional ?? false,
     analytics: prefs.analytics ?? false,
     marketing: prefs.marketing ?? false,
-    timestamp: Date.now()
+    timestamp: typeof window !== 'undefined' ? Date.now() : 0
   }
   
   setCookie(COOKIE_PREFERENCES_NAME, JSON.stringify(preferences), 365)
